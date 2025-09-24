@@ -1,0 +1,306 @@
+.bg-opacity-blur{
+  background-color: rgba(87, 87, 87, 0.4); /* n-60 40% 透明度 */
+  backdrop-filter: blur(4px);           /* 背景模糊 8px */
+  -webkit-backdrop-filter: blur(8px);   /* Safari 相容性 */
+  width: 636px;
+  height: 304px;
+  margin-top: 344px;
+  margin-bottom: 344px;
+}
+
+/* 一般狀態 */
+.carousel-indicators [data-bs-target] {
+  width: 72px;    /* bar 寬度 */
+  height: 8px;    /* bar 高度 */
+  margin-right: 32px;
+  background-color: #E8E8E8;   
+}
+
+/* active 狀態 */
+.carousel-indicators .active {
+  width: 72px;    /* bar 寬度 */
+  height: 8px;    /* bar 高度 */
+  margin-right: 32px;
+  background-color: #598E71; 
+}
+
+.section-margin{
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .section-margin {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.bg-liner-green{
+  background:linear-gradient(#ffffff,#E3EFE8,#ffffff);
+}
+
+/* 配對按鈕 */
+.fixed-right {
+    position: fixed ;
+    top: 50%;
+    right: 40px ;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a.social {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius:999px;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      box-shadow: 0px 0px 10px 0px rgba(30, 30, 30, 0.3);
+      text-decoration: none;
+      &:hover {
+          background: #E3EFE8;
+      }
+      img {
+          width: 24px;
+          height: 24px;
+      }
+    }
+}
+
+.white-bar{
+  width: 3px;
+  height: 124px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(30, 30, 30, 0.3);
+  display: flex;
+}
+/*葉子定位*/
+.leaf1{
+  position: absolute;
+  top: -95px;      
+  right: 24px;
+}
+.leaf2{
+  position: absolute;
+  left: 24px;      
+  bottom: 0;
+}
+.leaf3{
+  position: absolute;
+  top: -60px;      
+  right: 0px;
+  width: 100%; 
+  max-width: 252px;
+  height: auto;
+}
+/* 平板以下調整 */
+@media (max-width: 992px) {
+  .leaf3 { 
+    top: 10px;      
+    right: 0px;
+    width: 33%; 
+    max-width: 252px;
+    height: auto;
+  }
+}
+
+/* 手機以下調整 */
+@media (max-width: 576px) {
+  .leaf3 {  
+    top: -20px;
+    right: 0px;
+    width: 85px;
+    height: 116px;
+  }
+}
+
+a.sale{
+  text-decoration: none;
+}
+a.sale:hover .card-body{
+  background: #E3EFE8;
+  }
+@media (min-width:768px){
+  a.sale:hover .card-body{
+  background: #E3EFE8;
+  transform: scale(1.2);
+  }
+  a.sale:hover img{
+    transform: scale(1.2);
+  }
+}
+
+
+/* 商品分類 */
+.img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 圖片放大效果 */
+.img-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.2);
+}
+
+/* 遮罩 */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.5);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+/*圖片框線*/
+.inner-border {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  border: 1px solid #fff; /* 內框線顏色 */
+  z-index: 3; /* 在圖片上方，遮罩下方 */
+  pointer-events: none; /* 不阻擋點擊按鈕 */
+}
+@media (max-width: 768px) {
+  .inner-border {
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+.title-box {
+  /* padding: 8px 16px; */
+  display: inline-block;
+  z-index: 3;
+}
+
+.crop-img {
+  width: 100%;              /* 填滿 col-2 */
+  height: 480px;            /* 固定高度，才能裁切 */
+  object-fit: cover;        /* 保持比例，自動裁切超出部分 */
+  object-position: center;  /* 顯示位置 */
+}
+
+.social-img-box {
+  position: relative;
+  overflow: hidden;
+}
+.social-overlay{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 12px;
+  pointer-events: none; /* 遮罩不阻擋點擊 */
+
+  /* 漸層遮罩 */
+  background: linear-gradient(
+    to bottom, 
+    rgba(30, 30, 30, 0) 0%,    /* 上方透明 */
+    rgba(30, 30, 30, 0.2) 20%, /* 20% 位置半透明 */
+    rgba(30, 30, 30, 0.6) 60%  /* 60% 位置較深 */
+  );
+  z-index: 1;
+}
+.social-text{
+  position: absolute;
+  inset: 0; /* 佔滿整個容器，方便用 padding 控制 */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 40px; /* 預設桌機 */
+  z-index: 2;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .social-text {
+    padding: 16px;
+  }
+}
+/* 收合狀態的 <h3> 置中 */
+.collapsed-title {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 展開內容靠左底部 */
+.expanded-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 底部對齊 */
+  padding-left: 32px;
+  padding-bottom: 32px;
+}
+
+/* 企業責任切換 */
+.expandable-col {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.expandable-col .collapsed-title,
+.expandable-col .expanded-content {
+  transition: opacity 0.3s ease;
+}
+
+.expandable-col:not(.active) .expanded-content {
+  display: none; /* 收合時隱藏內文 */
+}
+
+.expandable-col.active .collapsed-title {
+  display: none; /* 展開時隱藏 h3 */
+}
+@media (max-width: 767.98px) {
+  .expandable-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .expandable-col .expanded-content {
+    display: flex !important;  /* 保持 badge+文字置底靠左 */
+  }
+
+  .expandable-col .collapsed-title {
+    display: none !important;
+  }
+}
+
+//字體
+/* .text-tl{
+  font-size: 20px;
+  line-height: 1.5;
+}
+.text-tm{
+  font-style: 16px;
+  line-height: 1.5;
+}
+.text-tr{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .section-margin {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+} */
