@@ -1,0 +1,44 @@
+/* 修改盒模型計算方式*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 清除圖片下方空白間隙 */
+img {
+  vertical-align: middle;
+}
+
+/* 設定其他的標籤基本樣式 */
+/* 標籤的基本樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #141a1f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}

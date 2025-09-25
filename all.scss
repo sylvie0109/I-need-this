@@ -1,0 +1,16 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./utils/variables";
+@import "../../node_modules/bootstrap";
+
+@import "./base/reset";
+
+@import "./components/buttom";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+/*按鈕樣式*/
+@import "./layout/button";
+
+@import "./pages/index.scss";
+@import "./pages/product.scss";
