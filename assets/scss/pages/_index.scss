@@ -1,27 +1,96 @@
-.bg-opacity-blur{
-  background-color: rgba(87, 87, 87, 0.4); /* n-60 40% 透明度 */
-  backdrop-filter: blur(4px);           /* 背景模糊 8px */
-  -webkit-backdrop-filter: blur(8px);   /* Safari 相容性 */
+.hero.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* Hero 區圖片 */
+.hero .carousel-item img {
+  width: 100%;             /* 填滿父容器寬度 */
+  height: 740px;           /* 固定高度 */
+  object-fit: cover;       /* 保持比例，裁切超出 */
+  object-position: center; /* 顯示圖片中心 */
+  display: block;
+}
+
+/* 文字區塊背景 */
+.bg-opacity-blur {
+  background-color: rgba(87, 87, 87, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
   width: 636px;
   height: 304px;
-  margin-top: 344px;
-  margin-bottom: 344px;
 }
 
-/* 一般狀態 */
-.carousel-indicators [data-bs-target] {
-  width: 72px;    /* bar 寬度 */
-  height: 8px;    /* bar 高度 */
-  margin-right: 32px;
-  background-color: #E8E8E8;   
+/* Caption → 左側垂直置中 */
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;                 /* 固定在左邊 */
+  display: flex;
+  align-items: center;     /* 垂直置中 */
+  justify-content: flex-start; /* 靠左 */
+  width: 100%;
+  text-align: left;
+  padding: 0 16px; /* 防止文字貼邊 */
 }
 
-/* active 狀態 */
-.carousel-indicators .active {
-  width: 72px;    /* bar 寬度 */
-  height: 8px;    /* bar 高度 */
-  margin-right: 32px;
-  background-color: #598E71; 
+/* 小於636px → 背景自適應 */
+@media (max-width: 635px) {
+  .bg-opacity-blur {
+    width: auto;
+    height: auto;
+    margin: 0 auto 60px; /* 底部留白 */
+  }
+}
+
+/* 手機版 Caption → 置中顯示 */
+@media (max-width: 767px) {
+  .carousel-caption {
+    justify-content: flex-end; /* 文字區塊往下靠底 */
+    align-items: flex-end;
+    padding: 0 12px 60px;     /* 左右12px，底部60px */
+    text-align: center;       /* 手機版文字置中 */
+  }
+  .carousel-caption .bg-opacity-blur {
+    width: 100%;     /* 小螢幕自適應寬度 */
+    height: auto;
+    margin: 0 auto;  /* 水平置中 */
+  }
+}
+
+/* 桌機版指示器：橫條 bar */
+@media (min-width: 768px) {
+  .carousel-indicators [data-bs-target] {
+    width: 72px;
+    height: 8px;
+    margin-right: 32px;
+    border-radius: 8px;
+    background-color: #E8E8E8;
+  }
+  .carousel-indicators .active {
+    background-color: #598E71;
+  }
+}
+
+/* 手機版指示器：圓點 */
+@media (max-width: 767.98px) {
+  .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+  }
+  .carousel-indicators .active {
+    background-color: #598E71;
+  }
+  /* 手機隱藏左右箭頭 */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
 }
 
 .section-margin{
@@ -95,6 +164,7 @@
   width: 100%; 
   max-width: 252px;
   height: auto;
+  z-index: 3; 
 }
 /* 平板以下調整 */
 @media (max-width: 992px) {
@@ -119,18 +189,30 @@
 
 a.sale{
   text-decoration: none;
+  display: block;              /* 確保可以放大 */
+  transition: transform 0.3s ease; /* 平滑動畫 */
+  position: relative;          /* z-index 需要定位 */
+  z-index: 1;                  /* 預設層級 */
+}
+a.sale .card {
+  transition: transform 0.3s ease;
 }
 a.sale:hover .card-body{
   background: #E3EFE8;
   }
-@media (min-width:768px){
-  a.sale:hover .card-body{
-  background: #E3EFE8;
-  transform: scale(1.2);
+
+/* hover 放大 */
+@media (min-width: 768px) {
+  a.sale:hover {
+    transform: scale(1.2);  /* 整個 a 放大 */
+    z-index: 2;             /* 提升層級，避免被左右卡片遮住 */
   }
-  a.sale:hover img{
-    transform: scale(1.2);
-  }
+
+}
+
+/* 避免 row overflow 被裁切 */
+.row.py-lg-10 {
+  overflow: visible;  /* 讓放大部分顯示出來 */
 }
 
 
@@ -205,8 +287,8 @@ a.sale:hover .card-body{
 .social-overlay{
   position: absolute;
   top: 0;
-  left: 0px;
-  right: 0px;
+  left: 4px;
+  right: 4px;
   bottom: 12px;
   pointer-events: none; /* 遮罩不阻擋點擊 */
 

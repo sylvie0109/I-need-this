@@ -24,12 +24,12 @@
 .btn-white{
     background: #ffffff;
     color: #1E1E1E;
-    padding: 12px;
+    padding: 12px 24px;
 }
 .btn-white:hover,.btn-white:active{
     background: #598E71;
     color: #ffffff;
-    padding: 12px;
+    padding: 12px 24px;
     border: none;
 }
 
@@ -37,6 +37,12 @@
     .btn-pdark{
         padding: 12px;
     }
+    .btn-pdark:hover,.btn-pdark:active{
+    background: #598E71;
+    color: #ffffff;
+    padding: 12px;
+}
+
     .btn-outline-pdark{
         padding: 12px;
     }
