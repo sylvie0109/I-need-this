@@ -1,0 +1,87 @@
+/* 導航列對齊 */
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .container {
+  display: flex;
+  flex-wrap: nowrap; /* 強制不換行 */
+  align-items: center; /* 垂直置中 */
+  justify-content: space-between;
+}
+
+.menu-color {
+  color: var(--Neutral-60);
+}
+
+/* 搜尋框 */
+.search-box {
+  border-bottom: 1px solid var(--Neutral-40); /* 只要下底線 */
+  width: 202px; /* 你可以自訂寬度 */
+}
+
+.search-input {
+  border: none; /* 移除預設邊框 */
+  outline: none; /* 移除點選時外框 */
+  flex: 1; /* 自動填滿剩餘空間 */
+  font-size: 16px;
+  padding: 5px 8px;
+}
+
+/* 搜尋 icon */
+.search-icon {
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    border-bottom: none;
+  }
+  .search-input {
+    width: 100%;
+    padding-right: 40px; /* 預留 icon 空間 */
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .search-box button {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 568px) {
+  .search-box {
+    border-bottom: none;
+  }
+  .search-input {
+    width: 100%;
+    padding-right: 20px; /* 預留 icon 空間 */
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .search-box button {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!-- 引入 Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>i need this</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+<div class="hero container-fluid">
+  <div class="mb-sm-7">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slides -->
+      <div class="carousel-inner">
+
+        <!-- 第一張 -->
+        <div class="carousel-item active">
+          <img src="../assets/images/hero-03.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="bg-opacity-blur px-4 py-5 py-lg-8 px-lg-7 text-start">
+                    <h1 class="h1 white pb-3 pb-lg-5">生活小物的靜謐時光</h1>
+                    <p class="h3 pb-6 pb-lg-10">用小物打造專屬的心靈港灣</p>
+                    <button type="button" class="btn btn-pdark d-flex align-items-center">
+                      看看商品
+                      <span class="material-symbols-outlined ms-2" style="font-size: 24px; width: 24px; height: 24px;">
+                        arrow_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>                        
+          </div>
+        </div>
+
+        <!-- 第二張 -->
+        <div class="carousel-item">
+          <img src="../assets/images/hero-01.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="bg-opacity-blur px-4 py-5 py-lg-8 px-lg-7 text-start">
+                    <h1 class="h1 white pb-3 pb-lg-5">仲夏香氛特調節</h1>
+                    <p class="h3 pb-6 pb-lg-10">特調仲夏香氛，沈浸自然的清涼氣息</p>
+                    <button type="button" class="btn btn-pdark d-flex align-items-center">
+                      看看商品
+                      <span class="material-symbols-outlined ms-2" style="font-size: 24px; width: 24px; height: 24px;">
+                        arrow_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+
+        <!-- 第三張 -->
+        <div class="carousel-item">
+          <img src="../assets/images/hero-02.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="bg-opacity-blur px-4 py-5 py-lg-8 px-lg-7 text-start">
+                    <h1 class="h1 white pb-3 pb-lg-5">來自大自然的香氣防護</h1>
+                    <p class="h3 pb-6 pb-lg-10">純植物精油，無化學添加，適合全家大小使用</p>
+                    <button type="button" class="btn btn-pdark d-flex align-items-center">
+                      看看商品
+                      <span class="material-symbols-outlined ms-2" style="font-size: 24px; width: 24px; height: 24px;">
+                        arrow_right
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="btn-p-100 carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<div class="bg-liner-green">
+  <!-- section1 限時提案 -->
+  <section class="container-fluid position-relative">
+    <div class="section-margin ">
+      <div class="d-md-flex flex-row  align-items-center">
+        <img src="../assets/images/section-01.png" alt="perfume" class="img-fluid mb-ms-2">
+        <div class="p-lg-11 py-5 px-4">
+          <h2 class="h2 mb-lg-7 mb-1">這個季節<span class="text-p-dark">剛剛好</span></h2>
+          <h2 class="h2 mb-4">生活選物<span class="text-p-dark">限時提案</span></h2>
+          <p class="text-neutral-60 mb-lg-7 mb-4 fs-sm-tr fs-md-tm">繁忙中也能片刻沉靜，挑一款剛好的香氛，隨時專注於自己的步調。</p>
+          <button type="button" class="btn btn-pdark d-flex align-items-center">
+                    看看商品
+                    <span class="material-symbols-outlined ms-2" style="font-size: 24px; width: 24px; height: 24px;">
+                      arrow_right
+                    </span>
+                  </button>
+        </div>
+      </div>
+    </div>
+    <img src="../assets/images/svg/graphic-01.svg" alt="葉子裝飾圖" class="leaf1 d-none d-md-block">
+  </section>
+
+  <!-- 分隔線 -->
+  <div class="container">
+    <div class="py-lg-10 py-0 text-center">
+      <img src="../assets/images/svg/graphic-02.svg" alt="" class="w-100">
+    </div>
+  </div>
+  <!-- section2 為日常加點新意 -->
+    <section class="container-fluid position-relative">
+    <div class="section-margin py-7">
+      <div class="d-md-flex flex-row-reverse  align-items-center">
+        <img src="../assets/images/section-02.png" alt="perfume" class="img-fluid mb-sm-2">
+        <div class="p-lg-11 p-5">
+          <h2 class="h2 mb-lg-7 mb-4">為日常<span class="text-p-dark">加點新意</span></h2>
+          <p class="text-neutral-60 mb-lg-7 mb-4">用香氣與觸感，輕輕刷新你的生活節奏。</p>
+          <button type="button" class="btn btn-pdark d-flex align-items-center">
+                    看看商品
+                    <span class="material-symbols-outlined ms-2" style="font-size: 24px; width: 24px; height: 24px;">
+                      arrow_right
+                    </span>
+                  </button>
+        </div>
+      </div>
+    </div>
+    <img src="../assets/images/svg/graphic-03.svg" alt="葉子裝飾圖" class="leaf2 d-none d-md-block">
+  </section>
+</div>
+<!-- section3 默默熱賣中 -->
+<section>
+  <div class="py-10 position-relative">
+    <div class="container">
+      <h2 class="h2 mb-4">默默熱賣中</h2>
+      <p class="text-neutral-60 mb-5">用過的人都不想換回去的東西</p>
+      <div class="row py-lg-10 overflow-x-auto flex-nowrap">
+        <div class="col-lg-3">
+          <a href="#" class="sale">
+            <div class="card border-0">
+              <img src="../assets/images/product-img-04.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="h5 mb-2">香氛蠟燭</h5>
+                <p class="card-text text-p-dark">「不只是香氣，還是生活裡的儀式感。」</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="#" class="sale">
+            <div class="card border-0">
+              <img src="../assets/images/product-img-03.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="h5 mb-2">擴香瓶</h5>
+                <p class="card-text text-p-dark">「用點燃，就能為家帶來溫柔香氣。」不</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="#" class="sale">
+            <div class="card border-0">
+              <img src="../assets/images/product-img-02.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="h5 mb-2">手工皂套組</h5>
+                <p class="card-text text-p-dark">「一塊手工皂，洗去一天的疲憊。」</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="#" class="sale">
+            <div class="card border-0">
+              <img src="../assets/images/product-img-01.jpg" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="h5 mb-2">精油薰香（兩入）</h5>
+                <p class="card-text text-p-dark">「空氣裡的療癒魔法。」</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="../assets/images/svg/graphic-04.svg" alt="葉子裝飾圖" class="leaf3">
+  </div>
+</section>
+<!-- section4 商品分類 -->
+<section class="container-fluid p-0">
+  <div class="d-flex flex-wrap">
+    <!-- 圖片 1 -->
+    <div class="img-box col-12 col-md-6 p-0">
+      <div class="img-inner">
+        <img src="../assets/images/category-04.png" class="w-100 h-100 object-fit-cover">
+        <!-- 內框 -->
+        <div class="inner-border"></div>
+        <!-- 遮罩標題按鈕 -->
+        <div class="overlay d-flex flex-column justify-content-center align-items-center ">
+          <h3 class="title-box h4 pb-6">日常療癒・文青系</h3>
+          <button class="btn btn-white">看看商品</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 圖片 2 -->
+    <div class="img-box col-12 col-md-6 p-0">
+      <div class="img-inner">
+        <img src="../assets/images/category-03.png" class="w-100 h-100 object-fit-cover">
+        <!-- 內框 -->
+        <div class="inner-border"></div>
+        <!-- 遮罩標題按鈕 -->
+        <div class="overlay d-flex flex-column justify-content-center align-items-center">
+          <h3 class="title-box h4 pb-6">俐落品味・都會控</h3>
+          <button class="btn btn-white">看看商品</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 圖片 3 -->
+    <div class="img-box col-12 col-md-6 p-0">
+      <div class="img-inner">
+        <img src="../assets/images/category-02.png" class="w-100 h-100 object-fit-cover">
+        <!-- 內框 -->
+        <div class="inner-border"></div>
+        <!-- 遮罩標題按鈕 -->
+        <div class="overlay d-flex flex-column justify-content-center align-items-center">
+          <h3 class="title-box h4 pb-6">純粹自然・健康派</h3>
+          <button class="btn btn-white">看看商品</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 圖片 4 -->
+    <div class="img-box col-12 col-md-6 p-0">
+      <div class="img-inner">
+        <img src="../assets/images/category-01.png" class="w-100 h-100 object-fit-cover">
+        <!-- 內框 -->
+        <div class="inner-border"></div>
+        <!-- 遮罩標題按鈕 -->
+        <div class="overlay d-flex flex-column justify-content-center align-items-center">
+          <h3 class="title-box h4 pb-6">溫暖幸福・家居族</h3>
+          <button class="btn btn-white">看看商品</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 企業責任 -->
+<section style="background-image: url('../assets/images/bgc-img.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;">
+  <div class="container py-10 py-lg-12">
+  <h2 class="h2 mb-6 mb-lg-10">企業責任</h2>
+  <div class="row g-2">
+    <!-- 環境責任 -->
+    <div class="col-lg-8 col-12 overflow-hidden social-img-box pb-3 expandable-col active">
+      <img src="../assets/images/slider-02.jpg" alt="" class="crop-img">
+      <div class="social-overlay"></div>
+      <div class="social-text position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+    
+        <!-- 收合標題 (置中) -->
+        <h3 class="collapsed-title d-none justify-content-center align-items-center w-100 h-100">
+          環境責任
+        </h3>
+        <div class="expanded-content flex-column justify-content-end h-100 text-start">
+          <div class="text-start mb-4">
+            <span class="badge rounded-pill text-bg-white h6 text-p-dark px-4 py-2">環境責任</span>
+          </div>
+          <p>時尚不該為地球造成負擔。<br>我們選擇永續材質、減少過度生產，讓每一件作品都能兼顧風格與環境。</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 社會責任 -->
+    <div class="col-lg-2 col-12 overflow-hidden social-img-box pb-3 expandable-col">
+      <img src="../assets/images/slider-03.jpg" alt="" class="crop-img">
+      <div class="social-overlay"></div>
+      <div class="social-text position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+        
+        <h3 class="collapsed-title justify-content-center align-items-center w-100 h-100">
+          社會責任
+        </h3>
+        <div class="expanded-content flex-column justify-content-end h-100 text-start">
+          <div class="text-start mb-4">
+            <span class="badge rounded-pill text-bg-white h6 text-p-dark px-4 py-2">社會責任</span>
+          </div>
+          <p>從原料採購到製造過程，我們與合作夥伴建立互信關係，不只創造產品，也共同守護勞動尊嚴。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 道德責任 -->
+    <div class="col-lg-2 col-12 overflow-hidden social-img-box pb-3 expandable-col">
+      <img src="../assets/images/slider-01.jpg" alt="" class="crop-img">
+      <div class="social-overlay"></div>
+      <div class="social-text d-flex flex-column justify-content-between h-100 position-absolute top-0 start-0 w-100">
+        
+        <h3 class="collapsed-title justify-content-center align-items-center w-100 h-100">
+          道德責任
+        </h3>
+        <div class="expanded-content flex-column justify-content-end h-100 text-start">
+          <div class="text-start mb-4">
+            <span class="badge rounded-pill text-bg-white h6 text-p-dark px-4 py-2">道德責任</span>
+          </div>
+          <p>我們定期支持公益項目，關注婦女、弱勢、教育議題，讓時尚成為推動改變的力量。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+<!-- 社群媒體列 -->
+<div class="d-flex flex-column justify-content-between fixed-right">
+  <div class="white-bar mb-6"></div>
+  <a href="#" class="social mb-6"><img src="../assets/images/icon/instagram.svg" alt="instagram"></a>
+  <a href="#" class="social mb-6"><img src="../assets/images/icon/youtube.svg" alt="youtube"></a>
+  <a href="#" class="social mb-6"><img src="../assets/images/icon/facebook.svg" alt="facebook"></a>
+  <a href="#" class="social mb-6"><img src="../assets/images/icon/tiktok.svg" alt="tiktok"></a>
+</div>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script>
+    document.querySelectorAll('.expandable-col').forEach(col => {
+      col.addEventListener('click', function() {
+        if(window.innerWidth < 768) return; // 手機版不處理
+
+        const allCols = document.querySelectorAll('.expandable-col');
+
+        allCols.forEach(c => {
+          c.classList.remove('col-lg-8', 'active');
+          c.classList.add('col-lg-2');
+
+          // 收合狀態：隱藏展開內容，顯示 collapsed 標題
+          c.querySelector('.expanded-content')?.classList.add('d-none');
+          c.querySelector('.collapsed-title')?.classList.remove('d-none');
+        });
+
+        // 點擊的展開
+        this.classList.remove('col-lg-2');
+        this.classList.add('col-lg-8', 'active');
+
+        // 展開狀態：隱藏 h3，顯示 badge + 內文
+        this.querySelector('.expanded-content')?.classList.remove('d-none');
+        this.querySelector('.collapsed-title')?.classList.add('d-none');
+      });
+    });
+    </script>
+  </body>
+</html>

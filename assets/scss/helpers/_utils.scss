@@ -1,0 +1,100 @@
+/* 文字 */
+.h3 {
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  font-style: bold;
+}
+.h5 {
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  font-style: bold;
+}
+.h6 {
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  font-style: bold;
+}
+.text-t-s {
+  font-family: Noto Sans TC;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  vertical-align: middle;
+  font-style: regular;
+}
+.text-t-r {
+  font-family: Noto Sans TC;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  vertical-align: middle;
+  font-style: regular;
+}
+.text-t-m {
+  font-family: Noto Sans TC;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  vertical-align: middle;
+  font-style: regular;
+}
+/*文字顏色 */
+.p100 {
+  color: var(--Primary-100);
+}
+.pdark {
+  color: var(--Primary-dark);
+}
+.neu0 {
+  color: var(--Neutral-0);
+}
+.neu40 {
+  color: var(--Neutral-40);
+}
+.neu60 {
+  color: var(--Neutral-60);
+}
+.neu80 {
+  color: var(--Neutral-80);
+}
+
+/*margin */
+.mr-auto {
+  margin-right: auto;
+}
+.mb-72 {
+  margin-bottom: 72px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mt-40 {
+  margin-top: 40px;
+}
+.mx-md-12 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/* padding */
+.py-40 {
+  padding: 40px 0;
+}
+.py-12 {
+  padding: 12px 0;
+}
