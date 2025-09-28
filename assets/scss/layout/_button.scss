@@ -2,12 +2,19 @@
     background: #1D6617;
     color: #ffffff;
     padding: 16px;
+    border: none; /* 避免邊框影響 */
+    outline: none; /* 避免點擊時輪廓 */
 }
-.btn-pdark:hover,.btn-pdark:active{
-    background: #598E71;
+.btn-pdark:hover {
+    background-color: #598E71;
     color: #ffffff;
-    padding: 16px;
 }
+
+.btn-pdark:active {
+    background-color: #598E71 !important;
+    color: #ffffff !important;
+}
+
 
 .btn-outline-pdark{
     border: 1px solid #1D6617 ;
@@ -26,11 +33,14 @@
     color: #1E1E1E;
     padding: 12px 24px;
 }
-.btn-white:hover,.btn-white:active{
+.btn-white:hover{
     background: #598E71;
     color: #ffffff;
-    padding: 12px 24px;
     border: none;
+}
+.btn-white:active{
+    background: #598E71 !important;
+    color: #ffffff !important;
 }
 
 @media (max-width: 768px) {
