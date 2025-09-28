@@ -2,6 +2,10 @@
 @import './utils/variables';
 @import "../../node_modules/bootstrap";
 
+@import "./base/reset";
+
+@import "./components/buttom";
+
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
@@ -9,3 +13,4 @@
 @import './layout/button';
 
 @import './pages/index.scss';
+@import "./pages/product.scss";
