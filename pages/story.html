@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I need this 品牌介紹</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('./layout/header.ejs') %>
+
+    <div class="main-content-wrapper">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">品牌介紹</li>
+          </ol>
+        </nav>
+      </div>
+      <main>
+        <div class="hero-image-wrapper">
+          <img
+            src="../assets/images/work-space.png"
+            alt="辦公室橫幅圖片"
+            class="hero-image"
+          />
+        </div>
+        <section class="intro-section d-md-none">
+          <div class="container">
+            <h4 class="intro-heading">I need this.</h4>
+            <p>是一個關於渴望、關於選擇的品牌。</p>
+            <p>
+              我們相信，生活中的每一個物件都應該是你的心之所向，發自內心的一句「我想要這個」。
+            </p>
+            <p>
+              我們致力於為你挑選，打造那些能點亮日常、提升生活品質，並能讓你產生強烈共鳴的質感好物。
+            </p>
+          </div>
+        </section>
+
+        <div class="container">
+          <section class="brand-story text-center">
+            <h3>品牌故事</h3>
+            <div
+              class="story-content d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="/assets/images/svg/graphic-05.svg"
+                alt="左側橄欖葉裝飾"
+                class="leaf-decoration d-none d-md-block"
+              />
+              <div class="story-text">
+                <p class="brand-name">I need this.</p>
+                <p>是一個關於渴望、關於選擇的品牌。</p>
+                <p>
+                  我們相信，生活中的每一個物件都應該是你的心之所向，發自內心的一句「我想要這個」。
+                </p>
+                <p>
+                  我們致力於為你挑選，打造那些能點亮日常、提升生活品質，並能讓你產生強烈共鳴的質感好物。
+                </p>
+              </div>
+              <img
+                src="/assets/images/svg/graphic-06.svg"
+                alt="右側橄欖葉裝飾"
+                class="leaf-decoration d-none d-md-block"
+              />
+            </div>
+          </section>
+
+          <section class="feature-section">
+            <div class="feature-content-wrapper">
+              <div class="text-container">
+                <h5 class="mb-3">生活小物，點亮日常生活</h5>
+                <p>
+                  在喧囂的世界裡，總有那麼一刻，你需要一個專屬於自己的寧靜港灣。
+                </p>
+                <p>
+                  I need this 透過一系列精心挑選的生活小物，為你創造這樣的時刻。
+                </p>
+                <h5 class="mt-4 mb-2">療癒時光</h5>
+                <p>
+                  我們選品的核心理念，是讓每一件商品都能成為你心靈的撫慰。無論是一盞溫暖的香氛蠟燭、一個觸感溫潤的陶器，或是能為空間帶來清新氣息的擴香瓶，這些小物都承載著我們對美好生活的期盼，讓你能在忙碌之餘，找到片刻的寧靜與平衡。
+                </p>
+              </div>
+              <div class="image-container">
+                <img
+                  src="/assets/images/brandimg1.jpg"
+                  alt="生活小物圖片"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="feature-section-alt">
+            <div class="feature-content-wrapper-alt">
+              <div class="image-container-alt">
+                <img src="/assets/images/brandimg2.jpg" alt="匠人精神圖片" />
+              </div>
+              <div class="text-container-alt">
+                <h5 class="mb-3">匠人精神，注入溫暖與細緻</h5>
+                <p>
+                  I need this 崇尚手作的溫度與匠人的堅持。
+                  我們相信，當一件商品注入了創作者的心血，他就不再只是單純的物件，而是一個有故事、有靈魂的藝術品。
+                </p>
+                <h5 class="mt-4 mb-2">感官體驗</h5>
+                <p>
+                  從嗅覺到觸覺，我們的產品旨在提供全面的感官享受。我們的香氛系列，使用天然精油與高品質原料，調配出獨特而迷人香氣；手工皂則由工匠精心製作，保留天然油脂的滋潤，讓每一次使用都成為一場溫暖的享受。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="closing-text text-center">
+            <div class="closing-text__content">
+              <p>在 I need this，</p>
+              <p>我們的商品、憑藉著使用者口耳相傳的口碑，</p>
+              <p>成為了許多人生活中「用過就不想換回去」的必備好物。</p>
+              <img
+                src="/assets/images/svg/graphic-08.svg"
+                alt="裝飾小圖"
+                class="small-icon"
+                style="
+                  position: absolute !important;
+                  top: 0 !important;
+                  right: 0 !important;
+                  width: 124px;
+                  height: 124px;
+                  z-index: 20;
+                "
+              />
+            </div>
+          </section>
+        </div>
+
+        <div class="decorative-swoosh">
+          <img src="/assets/images/svg/Vector-2.svg" alt="頁尾裝飾線條" />
+        </div>
+      </main>
+    </div>
+
+    <%- include('./layout/footer.ejs') %>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
