@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳畫面</title>
+    <link rel="stylesheet" href="/CSS/all.css">
+    <link rel="stylesheet" href="/CSS/css reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- 頁首 -->
+  <nav class="container mb-72 text-sans">
+    <div class="d-flex align-center justify-between">
+      <a href="index.html" class="py-16 "><img src="/assets/img/logo_on light.svg" alt="logo"></a>
+      <ul class="d-flex align-center">   
+        <li class="px-24 py-20"><div class="search-bar">
+          <input type="text" placeholder="輸入商品名稱" class="search-input">
+          <button class="search-button"><img src="/assets/img/Search.svg" alt="搜尋符號"></button></li>
+        <li><a href="#" class="p-24">品牌介紹</a></li>
+        <li><a href="#" class="p-24">所有商品</a></li>
+        <li><img src="/assets/img/Cart.svg" class="p-24" alt="購物車"></a></li>
+        <li><a href="" class="d-flex align-center justify-end px-32 py-32 bg-primary-dark tm login">註冊/登入</a></li>
+        </ul>
+    </div>
+  </nav>
+  <main class="container px-12 text-sans">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    // 找到所有數量控制容器
+    const quantityControls = document.querySelectorAll('.quantity-control');
+    // 迴圈處理每一個容器
+    quantityControls.forEach(control => {
+        const minusBtn = control.querySelector('.minus-btn');
+        const plusBtn = control.querySelector('.plus-btn');
+        const quantityInput = control.querySelector('.quantity-input');
+
+        minusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            // 確保數值不小於 1
+            if (value > 1) {
+                quantityInput.value = value - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+        });
+    });
+});
+    </script>
+<!-- 購物進度 -->
+    <div class="d-flex justify-center ">
+      <ul class="container row progress-label">
+        <li class="col-4 d-flex align-center flex-column lined-process py-16 text-primary-dark "><img src="/assets/img/Frame 1.svg" alt="1" class="icon-md-pd"><p class="h5 text-primary-dark">查看購物車</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="/assets/img/Frame 2.svg" alt="2" class="icon-md-pd"><p>填寫資料</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="/assets/img/Frame 3.svg" alt="3" class="icon-md-pd"><p>訂單確認</p></li>
+      </ul>
+    </div>
+    <!-- 購物車清單 -->
+    <div class="mb-56">
+      <h2 class="container py-8 bg-color text-serif cart-list">購物車清單</h2>
+      <div class="container">
+        <div class="d-flex justify-between col-cart-p">
+          <span class="tm col-product col-mr-56 table-description">商品資訊</span>
+          <span class="tm col-price col-mr-56 table-description">單價</span>
+          <span class="tm col-quantity col-mr-56 table-description">數量</span>
+          <span class="tm col-subtotal text-neuture-40 table-description">小計</span>
+        </div>
+        <!-- 商品資訊 -->
+        <div>
+          <!-- 琥珀之夜商品資訊 -->
+          <span class="container lined-product ">
+            <div class="d-flex align-center grid-product col-cart col-cart2">
+              <div class="d-flex align-center product-pd">
+                <img src="/assets/img/琥珀之夜.jpg" alt="琥珀之夜">
+                <div class="p-info ">
+                  <div>
+                    <P class="py-4 tm">琥珀之夜</P>
+                    <P class="h5 p-element">溫感香調精油</P>
+                    <p class="tr text-primary-100 text-pr-118">琥珀廣Ｘ藿香Ｘ雪松</p>
+                  </div>
+                </div>
+              </div>
+              <div class="h6 text-neuture-80 p-price">NT$ 399</div>
+              <div class="quantity-control quantity-btn col-mr-56 media-mb-16">
+                <button class="minus-btn icon-center p-16"><img src="/assets/img/Remove.svg" alt="減號"></button>
+                <input type="text" value="1" class="quantity-input tm">
+                <button class="plus-btn icon-center p-16"><img src="/assets/img/Add.svg" alt="加號"></button>
+              </div>
+              <div class="d-flex justify-space-between h6 media-mb-16"><div class="hide">總計</div>NT$ 1,197</div>
+            </div>
+          </span>
+          <!-- 靜夜語商品資訊 -->
+          <span class="container lined-product mb-56">
+            <div class="d-flex align-center grid-product col-cart col-cart2 mb-56 media-product">
+              <div class="d-flex align-center product-pd">
+                <img src="/assets/img/靜夜語.jpg" alt="靜夜語">
+                <div class="p-info">
+                  <P class="py-4 tm">靜夜語</P>
+                  <P class="h5 p-element">助眠放鬆精油</P>
+                  <p class="tr text-primary-100 text-pr-118">薰衣草Ｘ雪松Ｘ甜橙</p>
+                </div>
+              </div>
+              <div class="h6 text-neuture-80 p-price">NT$ 599</div>
+              <div class="quantity-control quantity-btn col-mr-56 media-mb-16">
+                <button class="minus-btn icon-center p-16"><img src="/assets/img/Remove.svg" alt="減號"></button>
+                <input type="text" value="1" class="quantity-input tm">
+                <button class="plus-btn icon-center p-16"><img src="/assets/img/Add.svg" alt="加號"></button>
+              </div>
+              <div class="d-flex justify-space-between h6 media-mb-16">
+                <div class="hide">總計</div>
+                <div>NT$ 599</div>
+              </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- 選擇送貨及付款方式、 付款方式-->
+    <div class="row mb-56 send container">
+      <div class="col-send col-6 checkout ">
+        <div class="mb-32 media-mb-16">
+          <h2 class="py-8 pl-16 bg-color text-serif">選擇送貨及付款方式</h2>
+        </div>
+        <div class="h7 mb-8">送貨方式</div>
+        <div class="form-group mb-32 media-mb-16">
+            <select id="shipping-method" class="tm text-neuture-80 custom-select">
+                <option value="store-pickup">超商取貨</option>
+                <option value="home-delivery">宅配</option>
+                <option value="express">快速到貨</option>
+            </select>
+        </div>
+        <div class="h7 mb-8">付款方式</div>
+        <div class="form-group">
+            <select id="shipping-method" class="tm text-neuture-80 custom-select">
+                <option value="credit-card">信用卡付款</option>
+                <option value="transfer">轉帳</option>
+            </select>
+        </div>
+      </div>
+      
+      <div class="col-6 order-Infor col-send">
+        <h2 class="py-8 pl-16 bg-color text-serif mb-16 ">訂單資訊</h2>
+        <div class="px-24">
+          <ul class="d-flex justify-between mb-16 sum">
+            <li class="tm text-neuture-60">總金額</li>
+            <li class="h6 media-h7">NT$ 1,796</li>
+          </ul>
+          <ul class="d-flex justify-between freight lined-cost mb-20">
+            <li class="tm text-neuture-60">運費</li>
+            <li class="h6 media-h7">NT$ 60</li>
+          </ul>
+          <ul class="d-flex justify-between mb-16">
+            <li class="tm text-neuture-60">應付金額</li>
+            <li class="h4 media-h4">NT$ 1,856</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 確認結帳按鈕 -->
+    <div class="d-flex justify-end tm mb-72">
+      <button type="button" class="p-16 back-step d-flex align-center btn-link text-neuture-40 "><img src="/assets/img/Arrow left.svg" alt="回上一步" class="arrow-img">回上一步</button>
+      <button type="button" class="p-16 btn-link d-flex align-center text-neuture-0 bg-primary-dark">下一步：填寫資料<img src="/assets/img/Arrow right.svg" alt="下一步：填寫資料" class="pl-8"></button>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
