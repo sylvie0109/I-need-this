@@ -1,0 +1,309 @@
+// --- 1. 主要內容區塊 ---
+
+.main-content-wrapper {
+  position: relative; // 設定相對定位，作為絕對定位子元素的基準
+  background-image: url("../assets/images/bgc-img 02.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 96px; // 增加底部內邊距，確保文字區塊與頁腳有 96px 的距離
+}
+
+.breadcrumb {
+  padding: 40px 0;
+  font-size: 16px;
+  color: var(--color-neutral-60);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0 !important;
+
+  .breadcrumb-item.active {
+    color: $p-dark;
+  }
+
+  a:last-child {
+    color: var(--color-neutral-100);
+  }
+}
+
+.hero-image-wrapper {
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 96px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// --- 3. 各區塊獨立樣式 ---
+
+h4,
+.h4,
+h5,
+.h5 {
+  color: $p-dark;
+}
+
+.brand-story {
+  text-align: center;
+  margin-bottom: 56px; // 【恢復】恢復與下方區塊的間距
+  h3 {
+    font-family: "Noto Serif TC", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--color-primary-dark);
+    margin-bottom: 30px; // 【恢復】恢復與下方內容的間距
+  }
+  .story-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 27px; // 【新增】設定頂部內距 27px
+    padding-bottom: 24px; // 【新增】設定底部內距 24px
+  }
+  .leaf-decoration {
+    width: 120px;
+  }
+  .story-text .brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-primary-dark);
+  }
+}
+
+// --- 4. 「生活小物」專用樣式 (右圖左文) ---
+.feature-section {
+  margin-bottom: 56px;
+  .feature-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1296px;
+    height: 292px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    width: 746px;
+    height: 268px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 526px;
+    height: 263px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// --- 5. 「匠人精神」專用樣式 (左圖右文) ---
+.feature-section-alt {
+  margin-bottom: 56px;
+  .feature-content-wrapper-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1296px;
+    height: 316px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .image-container-alt {
+    width: 526px;
+    height: 263px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-container-alt {
+    width: 746px;
+    height: 292px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+// --- 6. 結語區塊 & SVG 背景 ---
+.closing-text {
+  position: relative;
+  text-align: center;
+  color: var(--color-neutral-100);
+  font-size: 18px;
+  line-height: 1.8;
+
+  .closing-text__content {
+    width: 692px;
+    height: 234px;
+    margin: 0 auto;
+    padding: 72px 96px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+  }
+
+  .small-icon {
+    position: absolute;
+    top: 10px;
+    right: 250px;
+    width: 150px;
+  }
+}
+
+.decorative-swoosh {
+  position: absolute; // 絕對定位，相對於 .main-content-wrapper
+  bottom: 24px; // 定位於父容器底部上方 24px 處
+  left: 0;
+  width: 100%;
+  height: auto; // 讓 SVG 圖片高度自動縮放以維持比例
+  z-index: 0;
+  margin-bottom: 0;
+  line-height: 0; // 移除圖片下方可能出現的額外空白
+
+  img {
+    width: 100%;
+    height: auto; // 確保圖片高度能正確縮放
+    display: block;
+    object-fit: fill;
+  }
+}
+
+// --- 7. 手機版專用介紹區塊 (預設隱藏) ---
+.intro-section {
+  display: none;
+}
+
+// --- 8. 響應式樣式 (RWD) ---
+@media (max-width: 1300px) {
+  .feature-section .feature-content-wrapper,
+  .feature-section-alt .feature-content-wrapper-alt {
+    height: auto;
+    max-width: 95%;
+    gap: 20px;
+  }
+
+  .feature-section .feature-content-wrapper {
+    flex-direction: column;
+    .text-container,
+    .image-container {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+
+  .feature-section-alt .feature-content-wrapper-alt {
+    flex-direction: column-reverse;
+    .image-container-alt,
+    .text-container-alt {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: 20px 0;
+  }
+  .hero-image-wrapper {
+    height: 300px;
+    margin-bottom: 60px;
+  }
+
+  .brand-story {
+    .story-content {
+      gap: 15px;
+    }
+    .leaf-decoration {
+      display: none;
+    }
+  }
+
+  .closing-text {
+    font-size: 16px;
+    .small-icon {
+      display: none;
+    }
+    .closing-text__content {
+      width: 100%;
+      height: auto;
+      padding: 40px 20px;
+    }
+  }
+
+  .intro-section {
+    display: block;
+    background-color: transparent;
+    padding: 20px;
+    margin: 24px 0;
+    position: relative;
+    overflow: hidden;
+
+    .container {
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-heading {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--color-neutral-80);
+      text-align: left;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    &::before {
+      background-image: url("../assets/images/svg/graphic-05.svg");
+    }
+    &::after {
+      background-image: url("../assets/images/svg/graphic-05.svg");
+      transform: scaleX(-1);
+    }
+  }
+}
