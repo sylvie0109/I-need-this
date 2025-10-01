@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: var(--neutral-0);
+}
+
+h2.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: var(--neutral-80);
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--neutral-80);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--neutral-60);
+    margin-bottom: 20px;
+    background-color: var(--neutral-0);
+}
+
+.form-control:focus {
+    border-color: var(--Azure-blue);
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+button.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button.btn-primary {
+    background-color: var(--primary-dark);
+    color: var(--neutral-0);
+}
+
+button.btn-primary:hover {
+    background-color: var(--primary-100);
+}
+
+button.btn-link {
+    color: var(--Azure-blue);
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button.btn-link:hover {
+    color: var(--Azure-blue);
+    text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-check-label {
+    font-size: 14px;
+    color: var(--neutral-60);
+}

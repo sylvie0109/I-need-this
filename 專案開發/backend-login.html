@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台登入</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/variables.css">
+    <link rel="stylesheet" href="./style/utils.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/backend-login.css">
+</head>
+<body>
+
+<div class="login-container">
+  <h2 class="text-center">後台登入</h2>
+
+  <form action="#" method="POST">
+    <div class="mb-16">
+      <label for="username" class="form-label">使用者名稱或電子郵件</label>
+      <input type="email" class="form-control" id="username" placeholder="請輸入使用者名稱或電子郵件" required>
+    </div>
+
+    <div class="mb-16">
+      <label for="password" class="form-label">密碼</label>
+      <input type="password" class="form-control" id="password" placeholder="請輸入密碼" required>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+      <label class="form-check-label" for="rememberMe">保持登入</label>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn btn-primary">登入</button>
+      <button type="button" class="btn btn-link">忘記密碼？</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

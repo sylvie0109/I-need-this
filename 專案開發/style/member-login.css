@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--neutral-0);
+    padding: 30px;
+}
+
+h2.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--neutral-80);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-fb {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--neutral-60);
+    color: var(--neutral-0);
+    background-color: var(--Azure-blue);
+    cursor: pointer;
+}
+
+.btn-line {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--neutral-60);
+    color: var(--neutral-0);
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.btn-google {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--neutral-60);
+    color: var(--neutral-0);
+    background-color: var(--google-red);
+    cursor: pointer;
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--neutral-80);
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--neutral-60);
+    background-color: var(--neutral-0);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-dark);
+    color:  var(--neutral-0);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-100);
+}
+
+.divider {
+    border: 1px solid var(--neutral-40-50);
+    margin: 20px 0;
+}
+
+.custom-btn-link {
+    background-color: transparent;
+    color: var(--Azure-blue);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.custom-btn-link:hover {
+    text-decoration: underline;
+    color: var(--Azure-blue);
+}
+
+button {
+    width: 100%;
+}
