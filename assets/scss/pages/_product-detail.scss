@@ -1,0 +1,138 @@
+.border-b-neutral-20 {
+  border-bottom: 1px solid var(--neutral-20);
+}
+
+.border-b-neutral-40 {
+  border-bottom: 1px solid var(--neutral-40);
+}
+
+.border-b-dark {
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+.product-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.product-thumb img {
+  cursor: pointer;
+  height: auto;
+  display: block;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 38%;
+  border: 1px solid var(--neutral-40);
+}
+
+@media (max-width: 768px) {
+  .product-img-md {
+    width: 100%;
+  }
+
+  .fdc-md {
+    flex-direction: column;
+  }
+
+  .aifs-md {
+    align-items: flex-start;
+  }
+
+  .btn[type="button"].me-24 {
+    margin-right: 0;
+  }
+  
+  .quantity-selector {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .o-x-scroll-md {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fwn-md {
+    flex-wrap: nowrap;
+  }
+
+  .o-x-scroll-md ul {
+    min-width: max-content;
+  }
+
+  .o-x-scroll-md::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.product-size {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.product-info-title {
+  font-weight: 700;
+  color: var(--neutral-80);
+}
+
+.product-info-item {
+  color: var(--neutral-600);
+}
+
+.btn-product-size {
+  border: 1px solid var(--neutral-40-50);
+  width: 86px;
+}
+
+.btn-product-size.active,
+.btn-product-size:hover {
+  border-color: var(--primary-100);
+  background-color: var(--primary-100-15);
+  color: var(--primary-dark);
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--neutral-40);
+  color: var(--neutral-40);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-item.active {
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+.tab-item:hover {
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+.lstd {
+  list-style-type: disc;
+}
+
+.lstn {
+  list-style-type: none;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}

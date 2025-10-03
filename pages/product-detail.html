@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <!-- 引入 Material Outlined -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./scss/_all.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>商品細節｜I need this</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+  <!-- 導覽列 -->  
+<div class="container py-md-16">
+    <nav class="pt-40">
+      <ol class="d-flex">
+        <li class="breadcrumb-item">
+          <a href="#" class="text-neutral-40">首頁</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#" class="text-neutral-40">所有商品</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#" class="text-neutral-40">精油薰香</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#" class="text-primary-dark">「森呼吸」純植薰香精油瓶｜沉靜森調Ｘ居家療癒感</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <main class="container">
+    <div class="row py-64 py-md-16">
+      <!-- 產品圖片 -->
+      <div class="col-6 col-md-4">
+        <div class="product-row me-24 py-md-32">
+          <!-- 主圖 -->
+          <div class="product-col product-img-md mb-24">
+            <img id="main-product-img" src="../assets/images/product-01.png" alt="主商品圖" />
+          </div>
+
+          <!-- 縮圖 -->
+          <div class="d-flex">
+            <div class="product-thumb me-24">
+              <img src="../assets/images/product-02.png" alt="商品圖1" />
+            </div>
+            <div class="product-thumb me-24">
+              <img src="../assets/images/product-02.png" alt="商品圖2" />
+            </div>
+            <div class="product-thumb">
+              <img src="../assets/images/product-03.png" alt="商品圖3" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 產品描述 -->
+      <div class="col-6 col-md-4">
+        <div class="mb-32 py-md-16">
+          <h1 class="h2 mb-20 py-8 border-b-neutral-20">「森呼吸」純植薰香精油瓶｜沉靜森調Ｘ居家療癒感</h1>
+          <p class="h5 mb-40">NT$599</p>
+          <p class="text-neutral-60">三種天然精油配方，無添加</p>
+          <ul class="text-neutral-60">
+            <li>·檜木：穩定情緒，帶來大地木質調</li>
+            <li>·尤加利：淨化空氣，提神不刺鼻</li>
+            <li>·佛手柑：柔和果香，增加空間溫度感</li>
+          </ul>
+          <p class="mb-12 text-neutral-60">100% 純天然植物萃取、無酒精、無香精、不刺激寵物與孩童。</p>
+        </div>
+
+        <div class="d-flex align-center mb-40 fdc-md aifs-md">
+          <h3 class="me-32 mb-md-16 bold">規格</h3>
+          <div class="product-size">
+            <button type="button" class="btn btn-product-size active">10ml</button>
+            <button type="button" class="btn btn-product-size ml-24">20ml</button>
+          </div>
+        </div>
+
+        <div class="d-flex align-center mb-40 fdc-md aifs-md">
+          <h3 class="me-32 mb-md-16 bold">數量</h3>
+          <div class="quantity-selector">
+            <span class="btn">−</span>
+            <span class="value">1</span>
+            <span class="btn">＋</span>
+          </div>
+        </div>
+
+        <div class="d-flex mb-32 fdc-md">
+          <button type="button" class="btn btn-dark me-24 mb-md-16 flex-grow-1">加入購物車<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF" class="ms-2 vertical-middle">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+            </svg></button>
+          <button type="button" class="btn btn-light text-primary-dark flex-grow-1">加入收藏<i class="bi bi-heart ms-2"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Tab 標籤 -->
+    <ul class="d-flex justify-around align-center py-16 mb-40 fwn-md o-x-scroll-md">
+      <li class="tab-item active"><label for="tab1">商品介紹</label>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="vertical-middle ml-12">
+          <path fill="currentColor" d="m19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm0 6l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25zm-7.5-5.5L9 4L6.5 9.5L1 12l5.5 2.5L9 20l2.5-5.5L17 12zm-1.51 3.49L9 15.17l-.99-2.18L5.83 12l2.18-.99L9 8.83l.99 2.18l2.18.99z" />
+        </svg>
+        </a>
+      </li>
+      <li class="tab-item"><label for="tab2">顧客評價</label><i class="bi bi-chat-left-text vertical-middle ml-12"></i></a></li>
+      <li class="tab-item"><label for="tab3">售後服務</label>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="vertical-middle ml-12">
+          <path fill="currentColor" d="M12.22 19.85c-.18.18-.5.21-.71 0a.504.504 0 0 1 0-.71l3.39-3.39l-1.41-1.41l-3.39 3.39c-.19.2-.51.19-.71 0a.504.504 0 0 1 0-.71l3.39-3.39l-1.41-1.41l-3.39 3.39c-.18.18-.5.21-.71 0a.513.513 0 0 1 0-.71l3.39-3.39l-1.42-1.41l-3.39 3.39c-.18.18-.5.21-.71 0a.513.513 0 0 1 0-.71L9.52 8.4l1.87 1.86c.95.95 2.59.94 3.54 0c.98-.98.98-2.56 0-3.54l-1.86-1.86l.28-.28c.78-.78 2.05-.78 2.83 0l4.24 4.24c.78.78.78 2.05 0 2.83zm9.61-6.78a4.008 4.008 0 0 0 0-5.66l-4.24-4.24a4.008 4.008 0 0 0-5.66 0l-.28.28l-.28-.28a4.008 4.008 0 0 0-5.66 0L2.17 6.71a3.992 3.992 0 0 0-.4 5.19l1.45-1.45a2 2 0 0 1 .37-2.33l3.54-3.54c.78-.78 2.05-.78 2.83 0l3.56 3.56c.18.18.21.5 0 .71c-.21.21-.53.18-.71 0L9.52 5.57l-5.8 5.79c-.98.97-.98 2.56 0 3.54c.39.39.89.63 1.42.7a2.458 2.458 0 0 0 2.12 2.12a2.458 2.458 0 0 0 2.12 2.12c.07.54.31 1.03.7 1.42c.47.47 1.1.73 1.77.73c.67 0 1.3-.26 1.77-.73z" />
+        </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="row">
+      <!-- 商品介紹 -->
+      <!-- 左側：產品資訊 -->
+      <div class="col-7 col-md-4">
+        <ul>
+          <li class="mb-40 product-info-item">
+            <p class="text-primary-100">＃一開門就想到的味道</p>
+            <h4 class="py-12 product-info-title">你有多久，沒有好好深呼吸？</h4>
+            <p class="text-neutral-60">「森呼吸」將檜木、尤加利與佛手柑融合，喚醒空氣中那份大自然的清新。<br>
+              只需數滴，即可轉換整個空間的氛圍，讓你瞬間沉靜下來。</p>
+          </li>
+
+          <li class="mb-40">
+            <img src="../assets/images/svg/graphic-07.svg" style="width:96px; height:16px" alt="分隔線">
+          </li>
+
+          <li class="mb-40 product-info-item">
+            <h4 class="py-12 product-info-title">🏡 居家儀式感，從味道開始</h4>
+            <p class="text-neutral-60">無論是早晨醒來、下班放鬆、或是睡前閱讀時，點上擴香石或水氧機，讓你的日常多一點「森林感」。</p>
+          </li>
+
+          <li class="mb-40">
+            <img src="../assets/images/svg/graphic-07.svg" style="width:96px; height:16px" alt="分隔線">
+          </li>
+
+          <li class="mb-40 product-info-item">
+            <h4 class="py-12 product-info-title">內含配方</h4>
+            <p class="text-neutral-60">三種無添加的天然精油：</p>
+            <ul class="text-neutral-60 ps-3">
+              <li>· 檜木：穩定情緒，帶來大地木質調</li>
+              <li>· 尤加利：淨化空氣，提神不刺鼻</li>
+              <li>· 佛手柑：柔和果香，增加空間溫度感</li>
+            </ul>
+            <p class="text-neutral-60">100% 純天然植物萃取、無酒精、無香精、不刺激寵物與孩童。</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 右側：規格說明 -->
+      <div class="col-5 col-md-4">
+        <div class="bgc-green p-24 mb-md-32">
+          <h3 class="h5 mb-16">規格說明（範例）</h3>
+          <div class="border-b-neutral-40 mb-16"></div>
+          <ul class="text-primary-dark">
+            <li class="mb-16">容量：<span class="bold">10ml / 20ml 滴瓶裝</span></li>
+            <li class="mb-16">用法：<span class="bold">搭配擴香石、水氧機或手帕滴香使用</span></li>
+            <li class="mb-16">保存期限：<span class="bold">三年，建議半年內使用完最佳</span></li>
+            <li>保存方式：<span class="bold">避免陽光直射、高溫潮濕</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 顧客評價 -->
+
+
+    <!-- 售後服務 -->
+
+    </div>
+  </main>
+
+     <!-- 頁尾 -->
+
+
+  <script>
+    // 取得主圖元素
+    const mainImg = document.getElementById('main-product-img');
+    // 取得所有縮圖元素
+    const thumbs = document.querySelectorAll('.product-thumb img');
+    // 為每個縮圖加上滑鼠移入事件
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('mouseenter', () => {
+        mainImg.src = thumb.src;
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+      // 數量調整
+      const minusBtn = document.querySelector(".quantity-selector .btn:nth-child(1)");
+      const plusBtn = document.querySelector(".quantity-selector .btn:nth-child(3)");
+      const valueSpan = document.querySelector(".quantity-selector .value");
+      let quantity = 1;
+      minusBtn.addEventListener("click", () => {
+        if (quantity > 1) {
+          quantity--;
+          valueSpan.textContent = quantity;
+        }
+      });
+      plusBtn.addEventListener("click", () => {
+        quantity++;
+        valueSpan.textContent = quantity;
+      });
+      // 容量選擇
+      const sizeButtons = document.querySelectorAll(".btn-product-size");
+      sizeButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          sizeButtons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    });
+  </script>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
