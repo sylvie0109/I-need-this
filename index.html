@@ -8,56 +8,126 @@
     <!-- 引入 Material Outlined -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
     <title>i need this</title>
-    <script type="module" crossorigin src="/I-need-this/assets/main-JL8p51y4.js"></script>
-    <link rel="stylesheet" crossorigin href="/I-need-this/assets/main-DRAVmaGD.css">
+    <script type="module" crossorigin src="/I-need-this/assets/main-CqqblBhf.js"></script>
+    <link rel="stylesheet" crossorigin href="/I-need-this/assets/main-CckrOUg-.css">
   </head>
   <body>
-    head
-<nav class="navbar navbar-expand-lg py-0">
-    <div class="container d-flex align-items-center">
-        <!-- Logo -->
-        <a class="navbar-brand py-4" href="index.html">
-        <img src="/I-need-this/assets/logo_on%20light-CbsW53Vv.svg" alt="logo">
-        </a>
+    <nav class="navbar navbar-expand-lg py-0">
+  <div class="container d-flex align-items-center">
+    <!-- Logo -->
+    <a class="navbar-brand py-4" href="index.html">
+      <img src="/I-need-this/assets/logo_on%20light-CbsW53Vv.svg" alt="logo">
+    </a>
 
-        <!-- 右側內容 -->
-        <div class="d-flex align-items-center ms-auto" id="navbarSupportedContent">
-        
+    <!-- 右側內容 -->
+    <div class="d-flex align-items-center ms-auto" id="navbarSupportedContent">
+
+      <!-- 桌機版搜尋欄 -->
+      <div class="d-none d-lg-flex align-items-center border-bottom mx-6 my-5" style="max-width:154px;">
+        <input type="text" class="form-control border-0 shadow-none rounded-0 px-0 py-1" placeholder="輸入商品名稱">
+        <span class="material-icons-outlined ms-2">search</span>
+      </div>
+
+      <!-- 桌機版選單 -->
+      <ul class="navbar-nav d-none d-lg-flex align-items-center mb-0">
+        <li class="nav-item"><a class="nav-link px-2 m-6 text-n-80" href="brand.html">品牌介紹</a></li>
+        <li class="nav-item"><a class="nav-link px-2 m-6 text-n-80" href="product.html">所有商品</a></li>
+        <li class="nav-item"><a class="nav-link p-2 m-6 text-n-80" href="product.html"><span class="material-icons">shopping_cart</span></a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn-pdark px-6 py-7" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            註冊 / 登入
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item py-6 px-10 text-center" href="#">個人資訊</a></li>
+            <li><a class="dropdown-item py-6 px-10 text-center" href="#">我的收藏</a></li>
+            <li><a class="dropdown-item py-6 px-10 text-center" href="#">查看訂單狀態</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- 手機版：右側 icons -->
+      <div class="d-lg-none d-flex align-items-center">
+        <!-- Search Icon -->
+        <span id="searchToggle" class="material-icons-outlined p-4" role="button">search</span>
         <!-- 搜尋欄 -->
-        <div class="d-flex align-items-center border-bottom mx-6 my-5" style="max-width:154px;">
-            <input type="text" class="form-control border-0 shadow-none rounded-0 px-0 py-1"
-                placeholder="輸入商品名稱">
-            <span class="material-icons-outlined ms-2">search</span>
+        <div class="mobile-search position-absolute top-0 start-0 w-100 bg-white px-3 py-2 d-none d-flex align-items-center justify-content-between">
+          <input type="text" class="form-control border-0 border-bottom mobile-search-input" placeholder="搜尋...">
+          <span id="searchClose" class="material-icons-outlined fs-3 ms-2" role="button">close</span>
         </div>
 
-        <!-- 導覽選單 -->
-        <ul class="navbar-nav d-flex align-items-center mb-0">
-            <li class="nav-item">
-            <a class="nav-link px-2 m-6 text-n-80" href="brand.html">品牌介紹</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link px-2 m-6 text-n-80" href="product.html">所有商品</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link p-2 m-6 text-n-80" href="product.html">
-                <span class="material-icons">shopping_cart</span>
-            </a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btn-pdark px-6 py-7" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                註冊 / 登入
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item py-6 px-10 text-center" href="#">個人資訊</a></li>
-                <li><a class="dropdown-item py-6 px-10 text-center" href="#">我的收藏</a></li>
-                <li><a class="dropdown-item py-6 px-10 text-center" href="#">查看訂單狀態</a></li>
-            </ul>
-            </li>
-        </ul>
-        </div>
+        <!-- 漢堡選單 -->
+        <button class="navbar-toggler border-0 p-4" type="button" id="menuToggle">
+          <span class="material-icons fs-2">menu</span>
+        </button>
+      </div>
     </div>
-</nav><div class="hero container-fluid">
+  </div>
+</nav>
+
+<!-- 手機版滿版選單 -->
+<div id="mobileMenu" class="mobile-menu position-fixed top-0 start-0 w-100 h-100 bg-white d-none flex-column justify-content-between">
+  <div class="p-4">
+    <a href="brand.html" class="d-block py-4 fs-4 text-dark text-center border-bottom">品牌介紹</a>
+    <a href="product.html" class="d-block py-4 fs-4 text-dark text-center border-bottom">所有商品</a>
+  </div>
+  <div class="p-4">
+    <button class="btn btn-pdark w-100 py-3" data-bs-toggle="modal" data-bs-target="#loginModal">註冊 / 登入</button>
+  </div>
+</div>
+
+<!-- 登入 Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5 class="modal-title mb-3" id="loginModalLabel">登入</h5>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">密碼</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn btn-pdark w-100">登入</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+.mobile-search-input {
+  width: 283px;
+  margin: 0 auto;
+}
+.mobile-menu {
+  z-index: 1050; /* 蓋過 navbar */
+}
+</style>
+
+<script>
+const searchToggle = document.getElementById("searchToggle");
+const searchClose = document.getElementById("searchClose");
+const mobileSearch = document.querySelector(".mobile-search");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+// 搜尋開啟
+searchToggle.addEventListener("click", () => {
+  mobileSearch.classList.remove("d-none");
+});
+
+// 搜尋關閉
+searchClose.addEventListener("click", () => {
+  mobileSearch.classList.add("d-none");
+});
+
+// 漢堡選單開關
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("d-none");
+});
+</script>
+<div class="hero container-fluid">
   <div class="mb-sm-7">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
       
@@ -206,7 +276,7 @@
             <div class="card border-0">
               <img src="/I-need-this/assets/product-img-04-kY3yPqqL.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="h5 mb-2">香氛蠟燭</h5>
+                <h5 class="h5 mb-2 text-n-80">香氛蠟燭</h5>
                 <p class="card-text text-p-dark">「不只是香氣，還是生活裡的儀式感。」</p>
               </div>
             </div>
@@ -217,7 +287,7 @@
             <div class="card border-0">
               <img src="/I-need-this/assets/product-img-03-DGZxADdb.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="h5 mb-2">擴香瓶</h5>
+                <h5 class="h5 mb-2 text-n-80">擴香瓶</h5>
                 <p class="card-text text-p-dark">「用點燃，就能為家帶來溫柔香氣。」不</p>
               </div>
             </div>
@@ -228,7 +298,7 @@
             <div class="card border-0">
               <img src="/I-need-this/assets/product-img-02-BEMY6Ugr.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="h5 mb-2">手工皂套組</h5>
+                <h5 class="h5 mb-2 text-n-80">手工皂套組</h5>
                 <p class="card-text text-p-dark">「一塊手工皂，洗去一天的疲憊。」</p>
               </div>
             </div>
@@ -239,7 +309,7 @@
             <div class="card border-0">
               <img src="/I-need-this/assets/product-img-01-CQ5ZF02l.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="h5 mb-2">精油薰香（兩入）</h5>
+                <h5 class="h5 mb-2 text-n-80">精油薰香（兩入）</h5>
                 <p class="card-text text-p-dark">「空氣裡的療癒魔法。」</p>
               </div>
             </div>
