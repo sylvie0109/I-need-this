@@ -38,10 +38,10 @@ img {
 
 /* 連結樣式 */
 a {
-	color: var(--neuture-900);
+	color: var(--neuture-40);
 	text-decoration: none;
-	display: block;
-	font-weight: 500;
+	// display: block;
+	// font-weight: 500;
 }
 
 element {
@@ -51,7 +51,8 @@ element {
 
 /* 移除所有按鈕的圓角 */
 button {
-  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
@@ -266,10 +267,6 @@ button {
 
 .text-primary-dark {
     color: var(--primary-dark);
-}
-
-.pl-8 {
-    padding-left: 8px;
 }
 
 .pl-16 {
@@ -624,7 +621,13 @@ button {
 
 /* 回上一步 */
 .back-step {
+    padding: 16px;
     margin-right: 24px;
+}
+
+/* 下一步 */
+.next-step {
+    padding: 16px;
 }
 
 .checkout {
@@ -643,17 +646,44 @@ button {
     display: none;
 }
 
-ul {
+.ul {
+    padding-inline-start: 0;
     list-style-type: none;
+}
+
+.arrow-l {
+    padding-left: 8px;
+}
+
+.arrow-r {
+    padding-right: 8px;
+}
+
+
+// _variables.scss
+$breakpoint-tablet: 768px;
+
+// _mixins.scss
+
+/**
+ * 針對最大寬度為 768px 的設備應用樣式 (max-width: 768px)
+ * @content - 將在 media query 內執行的 CSS 內容
+ */
+@mixin on-tablet-down {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
 }
 
 
 
+// style.scss
 
+// 引入您的 Mixin (假設您在同一個檔案或已正確引入)
+// @import 'mixins'; 
 
-
-
-@media (max-width:768px) {
+// 🎯 使用 @include 呼叫 mixin，並將樣式放入其中
+@include on-tablet-down {
     .px-12 {
         padding-left: 12px;
         padding-right: 12px;
@@ -708,6 +738,11 @@ ul {
 
     .back-step {
         margin-right: 55px;
+        padding: 12px;
+    }
+
+    .next-step {
+        padding: 12px;
     }
 
     .text-pr-118 {
@@ -790,6 +825,14 @@ ul {
     .px-24 {
 	padding-left: 12px;
 	padding-right: 12px;
-}
+    }
+
+    .arrow-l {
+        padding-left: 4px;
+    }
+
+    .arrow-r {
+        padding-right: 4px;
+    }
     
 }
