@@ -1,4 +1,21 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+/* 配對按鈕 */
+.footer {
+    a.social {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius:999px;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      box-shadow: 0px 0px 10px 0px rgba(30, 30, 30, 0.3);
+      text-decoration: none;
+      &:hover {
+          background: #E3EFE8;
+      }
+      img {
+          width: 24px;
+          height: 24px;
+      }
+    }
 }
