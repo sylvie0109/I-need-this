@@ -15,7 +15,7 @@
   <nav class="container mb-72 text-sans">
     <div class="d-flex align-center justify-between">
       <a href="index.html" class="py-16 "><img src="../assets/images/svg/logo_on light.svg" alt="logo"></a>
-      <ul class="d-flex align-center">   
+      <ul class="d-flex align-center ul">   
         <li class="px-24 py-20"><div class="search-bar">
           <input type="text" placeholder="輸入商品名稱" class="search-input">
           <button class="search-button"><img src="../assets/images/svg/Search.svg" alt="搜尋符號"></button></li>
@@ -54,7 +54,7 @@
     </script>
 <!-- 購物進度 -->
     <div class="d-flex justify-center ">
-      <ul class="container row progress-label">
+      <ul class="container row ul">
         <li class="col-4 d-flex align-center flex-column lined-process py-16 text-primary-dark "><img src="../assets/images/svg/Frame 1.svg" alt="1" class="icon-md-pd"><p class="h5 text-primary-dark">查看購物車</p></li>
         <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="../assets/images/svg/Frame 2.svg" alt="2" class="icon-md-pd"><p>填寫資料</p></li>
         <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="../assets/images/svg/Frame 3.svg" alt="3" class="icon-md-pd"><p>訂單確認</p></li>
@@ -145,15 +145,15 @@
       <div class="col-6 order-Infor col-send">
         <h2 class="py-8 pl-16 bg-color text-serif mb-16 ">訂單資訊</h2>
         <div class="px-24">
-          <ul class="d-flex justify-between mb-16 sum">
+          <ul class="d-flex justify-between mb-16 sum ul">
             <li class="tm text-neuture-60">總金額</li>
             <li class="h6 media-h7">NT$ 1,796</li>
           </ul>
-          <ul class="d-flex justify-between freight lined-cost mb-20">
+          <ul class="d-flex justify-between freight lined-cost mb-20 ul">
             <li class="tm text-neuture-60">運費</li>
             <li class="h6 media-h7">NT$ 60</li>
           </ul>
-          <ul class="d-flex justify-between mb-16">
+          <ul class="d-flex justify-between mb-16 ul">
             <li class="tm text-neuture-60">應付金額</li>
             <li class="h4 media-h4">NT$ 1,856</li>
           </ul>
@@ -161,9 +161,9 @@
       </div>
     </div>
     <!-- 確認結帳按鈕 -->
-    <div class="d-flex justify-end tm mb-72">
-      <button type="button" class="p-16 back-step d-flex align-center btn-link text-neuture-40 "><img src="../assets/images/svg/Arrow left.svg" alt="回上一步" class="arrow-img">回上一步</button>
-      <button type="button" class="p-16 btn-link d-flex align-center text-neuture-0 bg-primary-dark">下一步：填寫資料<img src="../assets/images/svg/Arrow right.svg" alt="下一步：填寫資料" class="pl-8"></button>
+    <div class="d-flex justify-end tm mb-72 ">
+      <div class="text-neuture-40 "><a href="#" class="back-step d-flex align-center bg-neutral-20 "><img src="../assets/images/svg/Arrow left.svg" alt="" class="arrow-r">回上一步</a></div>  
+      <div class="btn-link d-flex align-center text-neuture-0 bg-primary-dark"><a href="#" class="d-flex align-center next-step text-neuture-0">下一步：填寫資料<img src="../assets/images/svg/Arrow right.svg" alt="" class="arrow-l"></a></div>
     </div>
   </main>
   <footer></footer>
