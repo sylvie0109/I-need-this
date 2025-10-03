@@ -1,14 +1,20 @@
-// --- 1. 主要內容區塊 ---
-
+// =============================================
+// --- 1. 主要內容區塊容器 ---
+// 設定整個頁面內容的背景圖、基本定位與底部留白。
+// =============================================
 .main-content-wrapper {
-  position: relative; // 設定相對定位，作為絕對定位子元素的基準
+  position: relative;
   background-image: url("../assets/images/bgc-img02.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding-bottom: 96px; // 增加底部內邊距，確保文字區塊與頁腳有 96px 的距離
+  padding-bottom: 96px;
 }
 
+// =============================================
+// --- 2. 麵包屑導覽 ---
+// 設定頁面路徑導覽列的樣式，包含間距、顏色與響應式調整。
+// =============================================
 .breadcrumb {
   padding: 40px 0;
   font-size: 16px;
@@ -25,22 +31,38 @@
   a:last-child {
     color: var(--color-neutral-100);
   }
+
+  // 手機版縮小上下間距
+  @include breakpoint(md) {
+    padding: 20px 0;
+  }
 }
 
+// =============================================
+// --- 3. 頁首橫幅圖片 (Hero Image) ---
+// 設定主視覺橫幅圖片的容器尺寸與響應式高度。
+// =============================================
 .hero-image-wrapper {
   height: 450px;
   overflow: hidden;
   margin-bottom: 96px;
+
+  // 手機版調整高度與下方間距
+  @include breakpoint(md) {
+    height: 300px;
+    margin-bottom: 60px;
+  }
 }
 
+// 橫幅圖片本身使用 mixin 填滿容器
 .hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  @include img-cover;
 }
 
-// --- 3. 各區塊獨立樣式 ---
-
+// =============================================
+// --- 4. 標題通用樣式 ---
+// 統一設定 h4 與 h5 標題的顏色。
+// =============================================
 h4,
 .h4,
 h5,
@@ -48,28 +70,38 @@ h5,
   color: $p-dark;
 }
 
+// =============================================
+// --- 5. 品牌故事區塊 ---
+// 設定置中的品牌故事標題、內文排版以及兩側的葉子裝飾。
+// =============================================
 .brand-story {
   text-align: center;
-  margin-bottom: 56px; // 【恢復】恢復與下方區塊的間距
+  margin-bottom: 56px;
+
   h3 {
     font-family: "Noto Serif TC", serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 120%;
     color: var(--color-primary-dark);
-    margin-bottom: 30px; // 【恢復】恢復與下方內容的間距
+    margin-bottom: 30px;
   }
+
   .story-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 30px;
-    padding-top: 27px; // 【新增】設定頂部內距 27px
-    padding-bottom: 24px; // 【新增】設定底部內距 24px
+    padding-top: 27px;
+    padding-bottom: 24px;
+
+    @include breakpoint(md) {
+      gap: 15px;
+    }
   }
+
   .leaf-decoration {
     width: 120px;
   }
+
   .story-text .brand-name {
     font-size: 24px;
     font-weight: 700;
@@ -78,18 +110,35 @@ h5,
   }
 }
 
-// --- 4. 「生活小物」專用樣式 (右圖左文) ---
+// =============================================
+// --- 6. 特色介紹區塊 (右圖左文) ---
+// 設定圖文介紹區塊的排版，桌機版為左文右圖，手機版變為垂直堆疊。
+// =============================================
 .feature-section {
   margin-bottom: 56px;
+
   .feature-content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 24px;
     max-width: 1296px;
     height: 292px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    // 平板與手機版改為垂直排列
+    @include breakpoint(lg) {
+      height: auto;
+      max-width: 95%;
+      gap: 20px;
+      flex-direction: column;
+
+      .text-container,
+      .image-container {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+    }
   }
 
   .text-container {
@@ -107,25 +156,40 @@ h5,
     overflow: hidden;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @include img-cover;
     }
   }
 }
 
-// --- 5. 「匠人精神」專用樣式 (左圖右文) ---
+// =============================================
+// --- 7. 特色介紹區塊 - 版型變換 (左圖右文) ---
+// 同上一個區塊，但桌機版改為左圖右文。
+// 手機版因改為垂直排列，使用 column-reverse 使圖片仍在文字上方。
+// =============================================
 .feature-section-alt {
   margin-bottom: 56px;
+
   .feature-content-wrapper-alt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 24px;
     max-width: 1296px;
     height: 316px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    @include breakpoint(lg) {
+      height: auto;
+      max-width: 95%;
+      gap: 20px;
+      flex-direction: column-reverse; // 反轉堆疊順序
+
+      .image-container-alt,
+      .text-container-alt {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+    }
   }
 
   .image-container-alt {
@@ -134,9 +198,7 @@ h5,
     overflow: hidden;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @include img-cover;
     }
   }
 
@@ -149,13 +211,20 @@ h5,
   }
 }
 
-// --- 6. 結語區塊 & SVG 背景 ---
+// =============================================
+// --- 8. 結語文字區塊 ---
+// 頁面底部的置中結語文字，包含一個絕對定位的裝飾小圖示。
+// =============================================
 .closing-text {
   position: relative;
   text-align: center;
   color: var(--color-neutral-100);
   font-size: 18px;
   line-height: 1.8;
+
+  @include breakpoint(md) {
+    font-size: 16px;
+  }
 
   .closing-text__content {
     width: 692px;
@@ -165,6 +234,13 @@ h5,
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+
+    @include breakpoint(md) {
+      width: 100%;
+      height: auto;
+      // 【修改處 1】增加底部 padding，為圖示騰出空間
+      padding: 40px 20px 100px;
+    }
   }
 
   .small-icon {
@@ -172,93 +248,55 @@ h5,
     top: 10px;
     right: 250px;
     width: 150px;
+
+    // 手機版樣式
+    @include breakpoint(md) {
+      display: block !important;
+
+      // 【修改處 2】重新設定圖示大小與位置
+      width: 60px !important;
+      height: 60px !important;
+      top: auto !important;
+      right: auto !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      // 將圖示定位在父容器底部 padding 的位置
+      bottom: 20px !important;
+      z-index: 5;
+    }
   }
 }
-
+// =============================================
+// --- 9. 頁尾裝飾性 SVG 線條 ---
+// 位於主要內容區塊底部的波浪形 SVG 裝飾線。
+// =============================================
 .decorative-swoosh {
-  position: absolute; // 絕對定位，相對於 .main-content-wrapper
-  bottom: 24px; // 定位於父容器底部上方 24px 處
+  position: absolute;
+  bottom: 24px;
   left: 0;
   width: 100%;
-  height: auto; // 讓 SVG 圖片高度自動縮放以維持比例
+  height: auto;
   z-index: 0;
   margin-bottom: 0;
-  line-height: 0; // 移除圖片下方可能出現的額外空白
+  line-height: 0;
 
   img {
     width: 100%;
-    height: auto; // 確保圖片高度能正確縮放
+    height: auto;
     display: block;
     object-fit: fill;
   }
 }
 
-// --- 7. 手機版專用介紹區塊 (預設隱藏) ---
+// =============================================
+// --- 10. 手機版專用介紹區塊 ---
+// 此區塊預設為隱藏，僅在手機尺寸 (768px 以下) 顯示。
+// 用於在手機上提供更簡潔的介紹文字。
+// =============================================
 .intro-section {
   display: none;
-}
 
-// --- 8. 響應式樣式 (RWD) ---
-@media (max-width: 1300px) {
-  .feature-section .feature-content-wrapper,
-  .feature-section-alt .feature-content-wrapper-alt {
-    height: auto;
-    max-width: 95%;
-    gap: 20px;
-  }
-
-  .feature-section .feature-content-wrapper {
-    flex-direction: column;
-    .text-container,
-    .image-container {
-      width: 100%;
-      height: auto;
-      text-align: center;
-    }
-  }
-
-  .feature-section-alt .feature-content-wrapper-alt {
-    flex-direction: column-reverse;
-    .image-container-alt,
-    .text-container-alt {
-      width: 100%;
-      height: auto;
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .breadcrumb {
-    padding: 20px 0;
-  }
-  .hero-image-wrapper {
-    height: 300px;
-    margin-bottom: 60px;
-  }
-
-  .brand-story {
-    .story-content {
-      gap: 15px;
-    }
-    .leaf-decoration {
-      display: none;
-    }
-  }
-
-  .closing-text {
-    font-size: 16px;
-    .small-icon {
-      display: none;
-    }
-    .closing-text__content {
-      width: 100%;
-      height: auto;
-      padding: 40px 20px;
-    }
-  }
-
-  .intro-section {
+  @include breakpoint(md) {
     display: block;
     background-color: transparent;
     padding: 20px;
@@ -284,9 +322,16 @@ h5,
       font-size: 14px;
       line-height: 1.8;
       color: var(--color-neutral-80);
-      text-align: left;
+      text-align: center; // 文字置中
+      margin-bottom: 1rem; // 增加段落下方間距
+
+      // 移除最後一個段落的間距
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
+    // 透過偽元素在背景加上裝飾圖案
     &::before,
     &::after {
       content: "";
@@ -300,10 +345,14 @@ h5,
     }
     &::before {
       background-image: url("../assets/images/svg/graphic-05.svg");
+      top: 0;
+      left: -20px;
     }
     &::after {
       background-image: url("../assets/images/svg/graphic-05.svg");
       transform: scaleX(-1);
+      top: 0;
+      right: -20px;
     }
   }
 }

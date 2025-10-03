@@ -1,0 +1,33 @@
+// SCSS Mixins
+
+// 1. Flexbox 置中 Mixin
+// 用於快速實現水平垂直置中
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 2. 圖片滿版裁切 Mixin
+// 讓圖片填滿容器，類似 background-size: cover 的效果
+@mixin img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 3. 響應式設計 (RWD) 斷點 Mixin
+// 讓我們可以將 RWD 樣式寫在原本的選擇器內，提高可讀性
+@mixin breakpoint($point) {
+  @if $point == lg {
+    // 適用於 1300px 以下的螢幕 (例如：大型平板)
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $point == md {
+    // 適用於 768px 以下的螢幕 (例如：手機)
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
