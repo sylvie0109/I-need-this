@@ -1,6 +1,9 @@
 @import "mixins";
+
 @import "../../node_modules/bootstrap/scss/functions";
+
 @import "./utils/variables";
+
 @import "../../node_modules/bootstrap";
 
 @import "./base/reset";
@@ -8,12 +11,17 @@
 @import "./components/buttom";
 
 @import "./layout/header";
+
 @import "./layout/footer";
 
 /*按鈕樣式*/
+
 @import "./layout/button";
 
 @import "./pages/index";
+
 @import "./pages/product";
+
 @import "./pages/brand";
+
 @import "./pages/product-detail";
