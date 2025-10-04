@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳畫面</title>
+    <link rel="stylesheet" href="/CSS/all.css">
+    <link rel="stylesheet" href="/CSS/css reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/scss/pages/checkout.css"> 
+</head>
+<body>
+  <%- include('./layout/header'); -%>
+  <!-- 頁首 -->
+  <main class="checkout-container checkout-px-12 checkout-mt-72 text-sans">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    // 找到所有數量控制容器
+    const quantityControls = document.querySelectorAll('.quantity-control');
+    // 迴圈處理每一個容器
+    quantityControls.forEach(control => {
+        const minusBtn = control.querySelector('.minus-btn');
+        const plusBtn = control.querySelector('.plus-btn');
+        const quantityInput = control.querySelector('.quantity-input');
+
+        minusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            // 確保數值不小於 1
+            if (value > 1) {
+                quantityInput.value = value - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+        });
+    });
+});
+    </script>
+<!-- 購物進度 -->
+    <div class="checkout-container ">
+      <ul class="row ul d-flex">
+        <li class="col-4 d-flex align-center flex-column lined-process py-16 text-primary-dark "><img src="../assets/images/svg/Frame 1.svg" alt="1" class="icon-md-pd"><p class="checkout-h5 text-primary-dark">查看購物車</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 checkout-h5 text-neuture-40"><img src="../assets/images/svg/Frame 2.svg" alt="2" class="icon-md-pd"><p>填寫資料</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 checkout-h5 text-neuture-40"><img src="../assets/images/svg/Frame 3.svg" alt="3" class="icon-md-pd"><p>訂單確認</p></li>
+      </ul>
+    </div>
+    <!-- 購物車清單 -->
+    <div class="mb-56">
+      <h2 class="checkout-container checkout-py-8 bg-color text-serif cart-list">購物車清單</h2>
+      <div class="checkout-container">
+        <div class="justify-between col-cart-p">
+          <span class="tm col-product col-mr-56 table-description">商品資訊</span>
+          <span class="tm col-price col-mr-56 table-description">單價</span>
+          <span class="tm col-quantity col-mr-56 table-description">數量</span>
+          <span class="tm col-subtotal text-neuture-40 table-description">小計</span>
+        </div>
+        <!-- 商品資訊 -->
+        <div>
+          <!-- 琥珀之夜商品資訊 -->
+          <span class="checkout-container lined-product ">
+            <div class="align-center grid-product col-cart col-cart2">
+              <div class="d-flex align-center product-pd">
+                <img src="../assets/images/琥珀之夜.jpg" alt="琥珀之夜">
+                <div class="p-info">
+                  <div>
+                    <P class="checkout-py-4 tm">琥珀之夜</P>
+                    <P class="checkout-h5 p-element">溫感香調精油</P>
+                    <p class="tr text-primary-100 text-pr-118">琥珀廣Ｘ藿香Ｘ雪松</p>
+                  </div>
+                </div>
+              </div>
+              <div class="h6 text-neuture-80 p-price">NT$ 399</div>
+              <div class="quantity-control quantity-btn col-mr-56 media-mb-16">
+                <button class="minus-btn icon-center p-16"><img src="../assets/images/svg/Remove.svg" alt="減號"></button>
+                <input type="text" value="1" class="quantity-input tm">
+                <button class="plus-btn icon-center p-16"><img src="../assets/images/svg/Add.svg" alt="加號"></button>
+              </div>
+              <div class="d-flex justify-space-between checkout-h6 media-mb-16"><div class="hide">總計</div>NT$ 1,197</div>
+            </div>
+          </span>
+          <!-- 靜夜語商品資訊 -->
+          <span class="checkout-container lined-product mb-56">
+            <div class="align-center grid-product col-cart col-cart2 mb-56 media-product">
+              <div class="d-flex align-center product-pd">
+                <img src="../assets/images/靜夜語.jpg" alt="靜夜語">
+                <div class="p-info">
+                  <P class="checkout-py-4 tm">靜夜語</P>
+                  <P class="checkout-h5 p-element">助眠放鬆精油</P>
+                  <p class="tr text-primary-100 text-pr-118">薰衣草Ｘ雪松Ｘ甜橙</p>
+                </div>
+              </div>
+              <div class="h6 text-neuture-80 p-price">NT$ 599</div>
+              <div class="quantity-control quantity-btn col-mr-56 media-mb-16">
+                <button class="minus-btn icon-center p-16"><img src="../assets/images/svg/Remove.svg" alt="減號"></button>
+                <input type="text" value="1" class="quantity-input tm">
+                <button class="plus-btn icon-center p-16"><img src="../assets/images/svg/Add.svg" alt="加號"></button>
+              </div>
+              <div class="d-flex justify-space-between checkout-h6 media-mb-16">
+                <div class="hide">總計</div>
+                <div>NT$ 599</div>
+              </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- 選擇送貨及付款方式、 付款方式-->
+    <div class="checkout-row mb-56 checkout-container">
+      <div class="col-send checkout-col-6 checkout ">
+        <div class="mb-32 media-mb-16">
+          <h2 class="checkout-py-8 pl-16 bg-color text-serif">選擇送貨及付款方式</h2>
+        </div>
+        <div class="h7 checkout-mb-8">送貨方式</div>
+        <div class="form-group mb-32 media-mb-16">
+            <select id="shipping-method" class="tm text-neuture-80 custom-select">
+                <option value="store-pickup">超商取貨</option>
+                <option value="home-delivery">宅配</option>
+                <option value="express">快速到貨</option>
+            </select>
+        </div>
+        <div class="h7 checkout-mb-8">付款方式</div>
+        <div class="form-group">
+            <select id="shipping-method" class="tm text-neuture-80 custom-select">
+                <option value="credit-card">信用卡付款</option>
+                <option value="transfer">轉帳</option>
+            </select>
+        </div>
+      </div>
+      
+      <div class="checkout-col-6 order-Infor col-send">
+        <h2 class="checkout-py-8 pl-16 bg-color text-serif mb-16 ">訂單資訊</h2>
+        <div class="px-24">
+          <ul class="d-flex justify-between mb-16 sum ul">
+            <li class="tm text-neuture-60">總金額</li>
+            <li class="h6 media-h7">NT$ 1,796</li>
+          </ul>
+          <ul class="d-flex justify-between freight lined-cost mb-20 ul">
+            <li class="tm text-neuture-60">運費</li>
+            <li class="h6 media-h7">NT$ 60</li>
+          </ul>
+          <ul class="d-flex justify-between mb-16 ul">
+            <li class="tm text-neuture-60">應付金額</li>
+            <li class="media-h4 text-sans">NT$ 1,856</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 確認結帳按鈕 -->
+    <div class="d-flex justify-end tm mb-72 ">
+      <div class="text-neuture-40 "><a href="#" class="back-step d-flex align-center bg-neutral-20 "><img src="../assets/images/svg/Arrow left.svg" alt="" class="arrow-r">回上一步</a></div>  
+      <div class="btn-link d-flex align-center text-neuture-0 bg-primary-dark"><a href="#" class="d-flex align-center next-step text-neuture-0">下一步：填寫資料<img src="../assets/images/svg/Arrow right.svg" alt="" class="arrow-l"></a></div>
+    </div>
+  </main>
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
+</body>
+</html>
