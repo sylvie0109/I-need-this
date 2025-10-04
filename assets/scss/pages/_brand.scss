@@ -1,10 +1,16 @@
 // =============================================
+// --- 0. 路徑變數 ---
+// 集中管理資源的相對路徑，方便未來維護。
+// =============================================
+$image-path: "../assets/images/";
+
+// =============================================
 // --- 1. 主要內容區塊容器 ---
 // 設定整個頁面內容的背景圖、基本定位與底部留白。
 // =============================================
 .main-content-wrapper {
   position: relative;
-  background-image: url("../assets/images/bgc-img02.png");
+  background-image: url($image-path + "bgc-img02.png"); // 使用變數組合路徑
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -344,12 +350,12 @@ h5,
       z-index: 0;
     }
     &::before {
-      background-image: url("../assets/images/svg/graphic-05.svg");
+      background-image: url($image-path + "svg/graphic-05.svg"); // 使用變數組合路徑
       top: 0;
       left: -20px;
     }
     &::after {
-      background-image: url("../assets/images/svg/graphic-05.svg");
+      background-image: url($image-path + "svg/graphic-05.svg"); // 使用變數組合路徑
       transform: scaleX(-1);
       top: 0;
       right: -20px;
