@@ -1,4 +1,54 @@
-@charset "UTF-8";
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 /* 顏色 */
 :root {
   --primary-80: #E3EFE8;
@@ -55,8 +105,8 @@ button {
 }
 
 /* 通用樣式 */
-.container {
-  width: 1296px;
+.checkout-container {
+  max-width: 1296px;
   margin: 0 auto;
 }
 
@@ -68,77 +118,73 @@ button {
   flex-wrap: wrap;
 }
 
+/* 負層，容器樣式 */
+.checkout-row {
+  /* 使用flex語法 */
+  display: flex;
+  /* 自動換行 */
+  flex-wrap: wrap;
+}
+
 /* 欄位樣式，12欄 */
 .col-1 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 8.3333333333%;
 }
 
 .col-2 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 16.6666666667%;
 }
 
 .col-3 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 25%;
 }
 
 .col-4 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 33.3333333333%;
 }
 
 .col-5 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 41.6666666667%;
 }
 
 .col-6 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 50%;
 }
 
 .col-7 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 58.3333333333%;
 }
 
 .col-8 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 66.6666666667%;
 }
 
 .col-9 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 75%;
 }
 
 .col-10 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 83.3333333333%;
 }
 
 .col-11 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 91.6666666667%;
 }
 
 .col-12 {
   padding-left: 12px;
   padding-right: 12px;
-  width: 100%;
 }
 
 /* flex 啟用 */
@@ -199,7 +245,7 @@ button {
   color: var(--primary-dark);
 }
 
-.h5 {
+.checkout-h5 {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
@@ -294,6 +340,11 @@ button {
   padding-bottom: 4px;
 }
 
+.checkout-py-4 {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
 .py-8 {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -380,6 +431,11 @@ button {
 .icon-center {
   display: flex;
   align-items: center;
+}
+
+.checkout-py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 /* .progress-vlabel {
@@ -605,6 +661,12 @@ button {
   padding: 0;
 }
 
+.checkout-col-6 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*6);
+}
+
 /* 回上一步 */
 .back-step {
   padding: 16px;
@@ -650,14 +712,14 @@ button {
  * @content - 將在 media query 內執行的 CSS 內容
  */
 @media (max-width: 768px) {
-  .px-12 {
+  .checkout-px-12 {
     padding-left: 12px;
     padding-right: 12px;
   }
   .p-24 {
     padding-left: 0;
   }
-  .container {
+  .v {
     max-width: 100%;
   }
   .cart-list {
@@ -715,6 +777,12 @@ button {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .checkout-col-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .hide {
     display: block;
   }

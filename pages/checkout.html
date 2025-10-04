@@ -14,7 +14,7 @@
 <body>
   <%- include('./layout/header'); -%>
   <!-- 頁首 -->
-  <main class="container px-12 text-sans">
+  <main class=" checkout-container checkout-px-12 text-sans">
     <script>
       document.addEventListener('DOMContentLoaded', () => {
     // 找到所有數量控制容器
@@ -41,18 +41,18 @@
 });
     </script>
 <!-- 購物進度 -->
-    <div class="d-flex justify-center ">
-      <ul class="container row ul">
-        <li class="col-4 d-flex align-center flex-column lined-process py-16 text-primary-dark "><img src="../assets/images/svg/Frame 1.svg" alt="1" class="icon-md-pd"><p class="h5 text-primary-dark">查看購物車</p></li>
-        <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="../assets/images/svg/Frame 2.svg" alt="2" class="icon-md-pd"><p>填寫資料</p></li>
-        <li class="col-4 d-flex align-center flex-column b-lined py-16 h5 text-neuture-40"><img src="../assets/images/svg/Frame 3.svg" alt="3" class="icon-md-pd"><p>訂單確認</p></li>
+    <div class="checkout-container ">
+      <ul class="row ul d-flex">
+        <li class="col-4 d-flex align-center flex-column lined-process py-16 text-primary-dark "><img src="../assets/images/svg/Frame 1.svg" alt="1" class="icon-md-pd"><p class="checkout-h5 text-primary-dark">查看購物車</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 checkout-h5 text-neuture-40"><img src="../assets/images/svg/Frame 2.svg" alt="2" class="icon-md-pd"><p>填寫資料</p></li>
+        <li class="col-4 d-flex align-center flex-column b-lined py-16 checkout-h5 text-neuture-40"><img src="../assets/images/svg/Frame 3.svg" alt="3" class="icon-md-pd"><p>訂單確認</p></li>
       </ul>
     </div>
     <!-- 購物車清單 -->
     <div class="mb-56">
-      <h2 class="container py-8 bg-color text-serif cart-list">購物車清單</h2>
-      <div class="container">
-        <div class="d-flex justify-between col-cart-p">
+      <h2 class="checkout-container checkout-py-8 bg-color text-serif cart-list">購物車清單</h2>
+      <div class="checkout-container">
+        <div class="justify-between col-cart-p">
           <span class="tm col-product col-mr-56 table-description">商品資訊</span>
           <span class="tm col-price col-mr-56 table-description">單價</span>
           <span class="tm col-quantity col-mr-56 table-description">數量</span>
@@ -61,14 +61,14 @@
         <!-- 商品資訊 -->
         <div>
           <!-- 琥珀之夜商品資訊 -->
-          <span class="container lined-product ">
-            <div class="d-flex align-center grid-product col-cart col-cart2">
+          <span class="checkout-container lined-product ">
+            <div class="align-center grid-product col-cart col-cart2">
               <div class="d-flex align-center product-pd">
                 <img src="../assets/images/琥珀之夜.jpg" alt="琥珀之夜">
-                <div class="p-info ">
+                <div class="p-info">
                   <div>
-                    <P class="py-4 tm">琥珀之夜</P>
-                    <P class="h5 p-element">溫感香調精油</P>
+                    <P class="checkout-py-4 tm">琥珀之夜</P>
+                    <P class="checkout-h5 p-element">溫感香調精油</P>
                     <p class="tr text-primary-100 text-pr-118">琥珀廣Ｘ藿香Ｘ雪松</p>
                   </div>
                 </div>
@@ -83,13 +83,13 @@
             </div>
           </span>
           <!-- 靜夜語商品資訊 -->
-          <span class="container lined-product mb-56">
-            <div class="d-flex align-center grid-product col-cart col-cart2 mb-56 media-product">
+          <span class="checkout-container lined-product mb-56">
+            <div class="align-center grid-product col-cart col-cart2 mb-56 media-product">
               <div class="d-flex align-center product-pd">
                 <img src="../assets/images/靜夜語.jpg" alt="靜夜語">
                 <div class="p-info">
-                  <P class="py-4 tm">靜夜語</P>
-                  <P class="h5 p-element">助眠放鬆精油</P>
+                  <P class="checkout-py-4 tm">靜夜語</P>
+                  <P class="checkout-h5 p-element">助眠放鬆精油</P>
                   <p class="tr text-primary-100 text-pr-118">薰衣草Ｘ雪松Ｘ甜橙</p>
                 </div>
               </div>
@@ -108,10 +108,10 @@
       </div>
     </div>
     <!-- 選擇送貨及付款方式、 付款方式-->
-    <div class="row mb-56 send container">
-      <div class="col-send col-6 checkout ">
+    <div class="checkout-row mb-56 checkout-container">
+      <div class="col-send checkout-col-6 checkout ">
         <div class="mb-32 media-mb-16">
-          <h2 class="py-8 pl-16 bg-color text-serif">選擇送貨及付款方式</h2>
+          <h2 class="checkout-py-8 pl-16 bg-color text-serif">選擇送貨及付款方式</h2>
         </div>
         <div class="h7 mb-8">送貨方式</div>
         <div class="form-group mb-32 media-mb-16">
@@ -130,8 +130,8 @@
         </div>
       </div>
       
-      <div class="col-6 order-Infor col-send">
-        <h2 class="py-8 pl-16 bg-color text-serif mb-16 ">訂單資訊</h2>
+      <div class="checkout-col-6 order-Infor col-send">
+        <h2 class="checkout-py-8 pl-16 bg-color text-serif mb-16 ">訂單資訊</h2>
         <div class="px-24">
           <ul class="d-flex justify-between mb-16 sum ul">
             <li class="tm text-neuture-60">總金額</li>

@@ -58,8 +58,8 @@ button {
 
 
 /* 通用樣式 */
-.container {
-    width: 1296px;
+.checkout-container {
+    max-width: 1296px;
     margin: 0 auto;
 }
 
@@ -292,6 +292,11 @@ button {
 }
 
 .py-4 {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.checkout-py-4 {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
@@ -619,6 +624,12 @@ button {
     padding: 0;
 }
 
+.checkout-col-6 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*6);
+}
+
 /* 回上一步 */
 .back-step {
     padding: 16px;
@@ -684,17 +695,13 @@ $breakpoint-tablet: 768px;
 
 // 🎯 使用 @include 呼叫 mixin，並將樣式放入其中
 @include on-tablet-down {
-    .px-12 {
+    .checkout-px-12 {
         padding-left: 12px;
         padding-right: 12px;
     }
 
     .p-24 {
         padding-left: 0;
-    }
-
-    .container {
-        max-width: 100%;
     }
 
     .cart-list {
@@ -764,6 +771,11 @@ $breakpoint-tablet: 768px;
     }
 
     .col-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .checkout-col-6 {
         padding-left: 0;
         padding-right: 0;
     }
