@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- 引入 Material Outlined -->
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
-    <script type="module" crossorigin src="/I-need-this/assets/main-Dq72L03m.js"></script>
-    <link rel="stylesheet" crossorigin href="/I-need-this/assets/main-CVOAbqDV.css">
-    <link rel="stylesheet" crossorigin href="/I-need-this/assets/product-Cer1LA4-.css">
-  </head>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_right" />
+
+   <script type="module" crossorigin src="/I-need-this/assets/main-ccZImUNY.js"></script>
+   <link rel="stylesheet" crossorigin href="/I-need-this/assets/main-C08aPYh9.css">
+   <link rel="stylesheet" crossorigin href="/I-need-this/assets/product-DFq0ddsm.css">
+ </head>
   <body>
     <nav class="navbar navbar-expand-lg py-0 shadow-sm">
   <div class="container d-flex align-items-center ">
@@ -133,25 +136,28 @@ menuToggle.addEventListener("click", () => {
 
    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="container d-none d-sm-none d-md-none d-lg-block mt-4 ">
   <ol class="breadcrumb text-t-m">
-    <li class="breadcrumb-item "><a href="#" class="neu40 text-decoration-none">首頁</a></li>
-    <li class="breadcrumb-item active breadcrumb-item-color " aria-current="page">所有商品</li>
+    <li class="breadcrumb-item "><a href="#" class="neu40 text-decoration-none" style="color:var(--Neutral-40) ;">首頁</a></li>
+    <span class="material-symbols-outlined " style="color: var(--Neutral-40);">
+            keyboard_arrow_right
+    </span>
+    <li class="breadcrumb-item active breadcrumb-item-color " aria-current="page" style="color: var(--Primary-dark);">所有商品</li>
   </ol>
 </nav>
 <main>
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col ">
-                <h5 class="h5 px-1 py-3 mt-1">商品列表</h5>
+                <h5 class="h5 px-1 py-3 mt-1" style="color: var(--Neutral-80);">商品列表</h5>
                 <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item mt-3 ">
+                    <div class="accordion-item mt-3">
                         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button text-t-m " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        <button class="accordion-button text-t-m " type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style="background-color: var(--Neutral-0);color:var(--Primary-100);border: none">
                             分類
                         </button>
                         </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show px-1" aria-labelledby="panelsStayOpen-headingOne">
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show px-1 " aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body text-t-m ">
-                                <button type="button" class="list-group-item list-group-item-action border-0 active px-1 py-3">所有商品</button>
+                                <button type="button" class="list-group-item list-group-item-action border-0 active px-1 py-3 ">所有商品</button>
                                 <button type="button" class="list-group-item list-group-item-action border-0 px-1 py-3">香水</button>
                                 <button type="button" class="list-group-item list-group-item-action border-0 px-1 py-3">擴香／香氛蠟燭</button>
                                 <button type="button" class="list-group-item list-group-item-action border-0 px-1 py-3">手工皂／香氛護膚</button>
@@ -159,14 +165,14 @@ menuToggle.addEventListener("click", () => {
                                
                             </div>
                             <div class="list-group text-t-m mt-3 px-1 py-3 d-block d-sm-block d-md-block d-lg-none">
-                                <p class="text-t-r label-line neu60 ">熱門專區</p>
+                                <p class="text-t-r label-line  neu60" >熱門專區</p>
                                 <button type="button" class="list-group-item list-group-item-action border-0 neu80">生活小物的靜謐時光</button>
                                 <button type="button" class="list-group-item list-group-item-action border-0 neu80">仲夏香氛特調節</button>
                                 <button type="button" class="list-group-item list-group-item-action border-0 neu80">來自大自然的香氣防護</button>
                                 
                             </div>
                             <div class="list-group text-t-m mt-3 px-1 py-3 d-block d-sm-block d-md-block d-lg-none">
-                                <div class="text-t-r label-line neu60 ">日常專區</div>
+                                <div class="text-t-r label-line neu60 " >日常專區</div>
                                 
                               
                                 <button type="button" class="list-group-item  list-group-item-action border-0 neu80">默默熱賣中</button>
@@ -218,7 +224,7 @@ menuToggle.addEventListener("click", () => {
             <div class="col-lg-9 ">
               <div class="mb-8 d-lg-flex justify-content-around">
 
-                <h3 class="h3 me-auto d-none d-sm-none d-md-none d-lg-block" >所有商品</h3><span class="text-t-m ">共有 17,204 項</span>
+                <h3 class="h3 me-auto d-none d-sm-none d-md-none d-lg-block" >所有商品</h3><span class="text-t-m neu60">共有 17,204 項</span>
               </div>
                 
                 <div class="row row-cols-2 row-cols-lg-3 g-4 ">
@@ -229,7 +235,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil1.jpg?raw=true" class="card-img-top" alt="oil1">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">森呼吸</p>
-                                    <h5 class="card-title h5 mb-1">森林系木質精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">森林系木質精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>
                             </a>
                             </div>
@@ -242,7 +248,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil2.jpg?raw=true" class="card-img-top" alt="oil2">
                                 <div class="card-body text-start">
                                     <p class="text-t-r neu60 mb-1">靜夜語</p>
-                                    <h5 class="card-title h5 mb-1">助眠放鬆精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">助眠放鬆精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                            
                                 </div>
                             </a>
@@ -255,7 +261,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil3.jpg?raw=true" class="card-img-top" alt="oil3">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">日光森森</p>
-                                    <h5 class="card-title h5 mb-1">提振早晨精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">提振早晨精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -268,7 +274,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil4.png?raw=true" class="card-img-top " alt="oil4">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">晨光之書</p>
-                                    <h5 class="card-title h5 mb-1">靈感專注精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">靈感專注精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -280,8 +286,8 @@ menuToggle.addEventListener("click", () => {
 
                                 <img src="https://github.com/a50134/project/blob/main/img/oil5.jpg?raw=true" class="card-img-top" alt="oil5">
                                 <div class="card-body">
-                                    <p class="text-t-r neu60 mb-1">櫻霞落日</p>
-                                    <h5 class="card-title h5 mb-1">療癒少女系精油</h5>
+                                    <p class="text-t-r neu60 mb-1" >櫻霞落日</p>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">療癒少女系精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -294,7 +300,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil6.jpg?raw=true" class="card-img-top" alt="oil6">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">琥珀之夜</p>
-                                    <h5 class="card-title h5 mb-1">溫感香調精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">溫感香調精油</h5>
                                     <h6 class="h6 pdark">NT$ 399</h6>                     
                                 </div>
                             </a>
@@ -307,7 +313,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil7.png?raw=true" class="card-img-top" alt="oil7">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">幻光晨曦</p>
-                                    <h5 class="card-title h5 mb-1">清新能量精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">清新能量精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -320,7 +326,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil8.jpg?raw=true" class="card-img-top" alt="oil8">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">清新檸香</p>
-                                    <h5 class="card-title h5 mb-1">浪漫微甜精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">浪漫微甜精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -333,7 +339,7 @@ menuToggle.addEventListener("click", () => {
                                 <img src="https://github.com/a50134/project/blob/main/img/oil9.png?raw=true" class="card-img-top" alt="oil9">
                                 <div class="card-body">
                                     <p class="text-t-r neu60 mb-1">琉璃秘境</p>
-                                    <h5 class="card-title h5 mb-1">冥想放空精油</h5>
+                                    <h5 class="card-title h5 mb-1" style="color:var(--Neutral-80)">冥想放空精油</h5>
                                     <h6 class="h6 pdark">NT$ 599</h6>                     
                                 </div>
                             </a>
@@ -344,7 +350,8 @@ menuToggle.addEventListener("click", () => {
                     <ul class="pagination justify-content-center text-t-m mt-8 mb-11  ">
                         <li class="page-item disabled ">
                             <a class="page-link neu40 me-7 p-4" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&lt;</span>
+                            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9D9D9D"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+                            </span>
                             </a>
                         </li>
                         <li class="page-item active "><a class="page-link bg-success p-4" href="#">1</a></li>
@@ -353,7 +360,10 @@ menuToggle.addEventListener("click", () => {
                         <li class="page-item"><a class="page-link page-neu80 p-4" href="#">4</a></li>
                         <li class="page-item ">
                             <a class="page-link neu80 ms-7 p-4" href="#" aria-label="Next">
-                            <span aria-hidden="true">></span>
+                            <span aria-hidden="true"><span class="material-symbols-outlined">
+                                keyboard_arrow_right
+                                </span>
+                            </span>
                             </a>
                         </li>
                     </ul>
