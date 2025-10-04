@@ -258,6 +258,13 @@ button {
   font-weight: 700;
 }
 
+.checkout-h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+
 .h7 {
   font-size: 14px;
   line-height: 1.2;
@@ -398,7 +405,7 @@ button {
   margin-bottom: 8px;
 }
 
-.mb-8 {
+.checkout-mb-8 {
   margin-bottom: 8px;
 }
 
@@ -707,6 +714,17 @@ button {
   padding-right: 8px;
 }
 
+.checkout-mt-72 {
+  margin-top: 72px;
+}
+
+.media-h4 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+
 /**
  * 針對最大寬度為 768px 的設備應用樣式 (max-width: 768px)
  * @content - 將在 media query 內執行的 CSS 內容
@@ -716,6 +734,11 @@ button {
     padding-left: 12px;
     padding-right: 12px;
   }
+
+  .checkout-mt-72 {
+    margin-top: 24px;
+  }
+
   .p-24 {
     padding-left: 0;
   }
@@ -817,6 +840,7 @@ button {
     font-weight: 700;
     color: var(--primary-dark);
   }
+
   .media-mb-16 {
     margin-bottom: 16px;
   }
