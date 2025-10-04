@@ -1,11 +1,11 @@
 // index.scss
 
 // 確保在檔案頂部引入 _mixins.scss
-// @import "mixins";
+@import "mixins";
 
-/* =============================================
-   Hero Section (輪播)
-   ============================================= */
+
+/* Hero Section (輪播) */
+
 .hero.container-fluid {
   padding: 0;
   margin: 0;
@@ -194,26 +194,36 @@
 /* =============================================
    卡片 & 圖片效果
    ============================================= */
-
-a.sale {
-  text-decoration: none;
+a.sale .card {
+  overflow: hidden;      /* 裁掉放大的圖片 */
+  border: 0;
+  position: relative;    /* 建立定位基準 */
+}
+a.sale .card-img-top {
   display: block;
+  width: 100%;
+  height: auto;
   transition: transform 0.3s ease;
+  transform-origin: center center;
   position: relative;
-  z-index: 1;
+  z-index: 1;            /* 圖片在下層 */
+}
 
-  .card {
-    transition: transform 0.3s ease;
-  }
-  &:hover .card-body {
-    background: #e3efe8;
+/* 文字區塊 */
+a.sale .card-body {
+  position: relative;
+  z-index: 2;            /* 文字在上層 */
+  transition: background 0.22s ease;
+}
+
+/* hover 效果 */
+@media (min-width: 768px) {
+  a.sale:hover .card-img-top {
+    transform: scale(1.2); /* 放大圖片 */
   }
 
-  @media (min-width: 768px) {
-    &:hover {
-      transform: scale(1.2);
-      z-index: 2;
-    }
+  a.sale:hover .card-body {
+    background: #E3EFE8;   /* hover 時加底色 */
   }
 }
 
@@ -284,8 +294,8 @@ a.sale {
   .social-overlay {
     position: absolute;
     top: 0;
-    left: 4px;
-    right: 4px;
+    left: 10px;
+    right: 10px;
     bottom: 12px;
     pointer-events: none;
     background: linear-gradient(
