@@ -1,0 +1,850 @@
+/* 顏色 */
+:root {
+    --primary-80: #E3EFE8;
+	--primary-100: #598E71;
+    --primary-dark: #1D6617;
+	--neutral-0: #FFFFFF;
+	--neutral-20: #E8E8E8;
+	--neuture-40: #9D9D9D;
+	--neuture-60: #575757;
+	--neuture-80: #1E1E1E;
+	--other: #F6F9EB;
+}
+
+/* 標籤基本樣式設定 */
+*,
+*::before,
+*::after {
+	/* 盒模型設定 */
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Noto Sans TC", serif;
+	font-size: 16px;
+	/* 行高1.5倍 */
+	line-height: 1.5;
+	/* 字距 */
+	letter-spacing: 0.05em;
+	color: var(--neuture-900);
+}
+
+img {
+	/* 圖片下方清除空白間隙 */
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 連結樣式 */
+a {
+	color: var(--neuture-40);
+	text-decoration: none;
+	// display: block;
+	// font-weight: 500;
+}
+
+element {
+  /* 移除所有圓角，將其設為方形 */
+  border-radius: 0;
+}
+
+/* 移除所有按鈕的圓角 */
+button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+/* 通用樣式 */
+.checkout-container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+/* 負層，容器樣式 */
+.row {
+	/* 使用flex語法 */
+	display: flex;
+	/* 自動換行 */
+	flex-wrap: wrap;
+}
+
+/* 欄位樣式，12欄 */
+.col-1 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12);
+}
+
+.col-2 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*2);
+}
+
+.col-3 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*3);
+}
+
+.col-4 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*4);
+}
+
+.col-5 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*5);
+}
+
+.col-6 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*6);
+}
+
+.col-7 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*7);
+}
+
+.col-8 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*8);
+}
+
+.col-9 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*9);
+}
+
+.col-10 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*10);
+}
+
+.col-11 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*11);
+}
+
+.col-12 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 100%;
+}
+
+/* flex 啟用 */
+.d-flex {
+    display: flex;
+}
+
+/* 水平向兩側對齊 */
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}
+
+/* 水平置中對齊 */
+.justify-center {
+    justify-content: center;
+}
+
+/* 水平平分對齊 */
+.justify-space-between {
+    justify-content: space-between;
+}
+
+/* 水平向右對齊 */
+.justify-end {
+    justify-content: end;
+}
+
+/* 垂直/交錯軸置中對齊 */
+.align-center {
+    align-items: center;
+}
+
+/* 元素自動換行 */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.fl-no {
+	flex-wrap: nowrap;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+
+.h4 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.h5 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.h6 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.h7 {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-serif {
+    font-family: "Noto Serif TC", serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.text-sans {
+    font-family: "Noto Sans TC", serif;
+}
+
+.tm {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.tr {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* 文字顏色 */
+.text-neuture-0 {
+    color: var(--neutral-0);
+}
+.text-neuture-40 {
+	color: var(--neuture-40);
+}
+
+.text-neuture-60 {
+	color: var(--neuture-60);
+}
+
+.text-neuture-80 {
+	color: var(--neuture-80);
+}
+
+.text-primary-100 {
+    color: var(--primary-100);
+}
+
+.text-primary-dark {
+    color: var(--primary-dark);
+}
+
+.pl-16 {
+	padding-left: 16px;
+}
+.pl-56 {
+	padding-left: 56px;
+}
+
+.px-8 {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.px-24 {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+.px-32 {
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.py-4 {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.checkout-py-4 {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.py-8 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.py-16 {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.py-20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.py-24 {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.py-32 {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.p-24 {
+	padding: 24px;
+}
+
+.pt-12 {
+    padding-top: 12px;
+}
+
+.pb-12 {
+    padding-bottom: 12px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.mr-24 {
+    margin-right: 24px;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-32 {
+	margin-bottom: 32px;
+}
+
+.mb-56 {
+	margin-bottom: 56px;
+}
+
+.mb-72 {
+	margin-bottom: 72px;
+}
+
+.icon-md-pd {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 12px;
+}
+
+.icon-center {
+    display: flex;
+    align-items: center;
+}
+
+/* .progress-vlabel {
+    margin-bottom: 56px;
+} */
+
+.sum {
+    padding-top: 12px;
+}
+
+.freight {
+    padding-bottom: 20px;    
+}
+
+.lined-cost {
+    border-bottom: 1px solid var(--neuture-80);
+    border-color: var(--neutral-20);
+}
+
+.bg-neutral-20 {
+    background-color: var(--neutral-20);
+}
+
+.bg-primary-dark {
+	background-color: var(--primary-dark);
+}
+
+.bg-color {
+	background-color: #598E7126;
+    width: auto;
+}
+
+.b-lined {
+	border-bottom: 1px solid var(--neuture-40);
+}
+
+.lined-process {
+    border-bottom: 2px solid var(--primary-dark);
+}
+
+.login {
+    color: var(--neutral-0);
+}
+
+.col-cart {
+    border-bottom: 1px solid var(--neuture-40);
+    display: grid;
+    /* 定義四個欄位，使用 fr 單位讓寬度按比例分配 */
+    grid-template-columns: 3fr 3fr 2fr 1fr;
+    
+    /* 垂直居中對齊文字 */
+    align-items: center;
+}
+
+.col-cart-p {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--neuture-40);
+    display: grid;
+    /* 定義四個欄位，使用 fr 單位讓寬度按比例分配 */
+    grid-template-columns: 3fr 3fr 2fr 1fr;
+    
+    /* 垂直居中對齊文字 */
+    align-items: center;
+}
+
+.col-product {
+    color: var(--neuture-40);
+    margin-left: 24px;
+}
+
+.col-price {
+    color: var(--neuture-40);
+}
+
+.col-quantity {
+    text-align: center;
+    color: var(--neuture-40);
+}
+
+.col-subtotal {
+    text-align: center;
+    margin-right: 24px;
+}
+
+.col-mr-56 {
+    margin-right: 56px;
+}
+
+.p-info {
+    padding-left: 16px;
+}
+
+.p-element {
+    margin-bottom: 21px;
+}
+
+.product-pd {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+}
+
+/* --- 數量控制容器 --- */
+.quantity-control {
+    height: 56px; /* 固定高度，讓按鈕和輸入框等高 */
+    width: auto;
+}
+
+/* --- 按鈕樣式 (減號和加號) --- */
+.quantity-control button {
+    border: none;
+    background-color: transparent;
+}
+
+.quantity-btn {
+    border: 1px solid var(--neuture-40);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- 按鈕樣式 (減號和加號) --- */
+.btn {
+    background-color: transparent; /* 背景透明 */
+    border: none;
+}
+
+.btn-link {
+    border: none;
+}
+
+/* --- 輸入框樣式 --- */
+.quantity-input {
+    text-align: center;
+    border: none;
+    padding: 0;
+    width: 128px;
+    color: var(--neuture-80);
+}
+
+.lined-product {
+    border-bottom: 1px solid var(--neuture-40);
+}
+
+/* .grid-product {
+    padding-bottom: -16px;
+} */
+
+.text-pr-118 {
+    padding-right: 118px;
+}
+
+.text-center {
+    color: var(--neuture-80);
+    text-align: center;
+}
+
+.cart-list {
+    padding-left: 16px;
+    margin-top: 56px;
+    margin-bottom: 32px;
+}
+
+/* --- 容器和標籤樣式 --- */
+.form-group {
+	border: 1px solid var(--neuture-40);	
+}
+
+.form-group label {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* --- 下拉式選單樣式 --- */
+.custom-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;    
+    appearance: none;
+    /* 設置下拉箭頭的背景圖 */
+    background-image: url('/assets/img/Keyboard arrow down.svg');
+    background-repeat: no-repeat;
+    /* 將圖片水平靠右，垂直置中 */
+    background-position: right 16px center;
+}
+
+
+/* 以下---找出搜尋欄的樣式 */
+.search-bar {
+    /* 使用 Flexbox 將內容水平對齊 */
+    display: flex;
+    align-items: center;
+    
+    /* 建立底部線條 */
+    border-bottom: 1px solid var(--neuture-40);
+    
+    /* 內邊距，使內容與邊緣有距離 */
+    padding-bottom: 4px;
+}
+
+.search-input {
+    /* 移除瀏覽器預設的邊框和輪廓 */
+    border: none;
+    outline: none;
+    
+    /* 設定字體大小和顏色 */
+    font-size: 16px;
+    color: var(--neuture-40);
+    
+    /* 佔滿剩餘空間 */
+    flex-grow: 1;
+}
+
+/* 設定 placeholder (提示文字) 的樣式 */
+.search-input::placeholder {
+    color: var(--neuture-40);
+    opacity: 1; /* 確保在所有瀏覽器中都顯示 */
+}
+
+.search-button {
+    /* 移除按鈕的背景、邊框，並將圖示顏色設為灰色 */
+    background-color: transparent;
+    border: none;
+    color: var(--neuture-40);
+    
+    /* 增加滑鼠移過時的樣式 */
+    cursor: pointer;
+    
+    /* 調整圖示大小 */
+    font-size: 18px;
+    
+    /* 移除預設的邊距 */
+    padding: 0;
+}
+
+.checkout-col-6 {
+	padding-left: 12px;
+	padding-right: 12px;
+	width: calc(100% / 12*6);
+}
+
+/* 回上一步 */
+.back-step {
+    padding: 16px;
+    margin-right: 24px;
+}
+
+/* 下一步 */
+.next-step {
+    padding: 16px;
+}
+
+.checkout {
+    padding-left: 0;
+}
+
+.order-Infor {
+    padding-right: 0;
+}
+
+.send {
+    margin-right: 24px;
+}
+
+.hide {
+    display: none;
+}
+
+.ul {
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+.arrow-l {
+    padding-left: 8px;
+}
+
+.arrow-r {
+    padding-right: 8px;
+}
+
+
+// _variables.scss
+$breakpoint-tablet: 768px;
+
+// _mixins.scss
+
+/**
+ * 針對最大寬度為 768px 的設備應用樣式 (max-width: 768px)
+ * @content - 將在 media query 內執行的 CSS 內容
+ */
+@mixin on-tablet-down {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+
+
+// style.scss
+
+// 引入您的 Mixin (假設您在同一個檔案或已正確引入)
+// @import 'mixins'; 
+
+// 🎯 使用 @include 呼叫 mixin，並將樣式放入其中
+@include on-tablet-down {
+    .checkout-px-12 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .p-24 {
+        padding-left: 0;
+    }
+
+    .cart-list {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+
+    .table-description {
+        display: none;        
+    }
+    
+    .col-cart-p {
+        border-bottom: none;
+    }
+
+    .col-cart2 {
+        border-bottom: 1px solid var(--neuture-40);
+    }
+
+    .grid-product {
+        display: block;
+    }
+
+    .col-4 {
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+    }
+
+    .p-price {
+        display: none;
+    } 
+
+    /* 商品數量 */
+    .p-quantity {
+        flex-direction: column;
+    }
+
+    .justify-end {
+        justify-content: center;
+    }
+
+    .back-step {
+        margin-right: 55px;
+        padding: 12px;
+    }
+
+    .next-step {
+        padding: 12px;
+    }
+
+    .text-pr-118 {
+        padding-right: 0px;
+    }
+
+    .col-subtotal {
+        text-align: right;
+        margin-right: 0px;
+        display: none;
+    }
+
+    .total {
+        flex-direction: row;
+    }
+
+    .col-mr-56 {
+        margin-right: 0;
+    }
+
+    .col-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .checkout-col-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    .product-pd {
+        padding-left: 0;
+    }
+    
+    .checkout {
+        flex-wrap: wrap;
+    }
+
+    .send {
+        display: flex;
+        flex-direction: column;
+        max-width: none; /* 移除最大寬度限制 */
+        width: 100%;    /* 確保佔滿整個父容器（即 body） */
+    }
+
+    .form-group {
+        margin-bottom: 40px;
+    }
+
+    .col-send {
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
+    }
+
+    .media-h7 {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+    }
+
+    .media-h4 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--primary-dark);
+    }
+    
+    .media-mb-16 {
+    margin-bottom: 16px;
+    }
+
+    .media-mb-20 {
+    margin-bottom: 20px;
+    }
+
+    .media-product {
+    margin-bottom: 40px;
+    }
+
+    .px-24 {
+	padding-left: 12px;
+	padding-right: 12px;
+    }
+
+    .arrow-l {
+        padding-left: 4px;
+    }
+
+    .arrow-r {
+        padding-right: 4px;
+    }
+    
+}
