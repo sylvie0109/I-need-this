@@ -1,0 +1,44 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    content: '>'; 
+    padding: 0 16px;
+    color: var(--Neutral-40);
+    font-weight: 400;
+}
+
+.breadcrumb-item {
+    display: flex;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-item {
+        font-size: 14px;
+        display: inline-flex; /* 確保項目水平方向顯示 */
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .breadcrumb-item:first-child::after {
+        content: " > … >" ; /* 只顯示首頁 */
+        padding: 0 8px;
+        color: var(--Neutral-40);
+    }
+
+    .breadcrumb-item:not(:first-child):not(:last-child),
+    .breadcrumb-item:last-child::before {
+        display: none;   /* 隱藏中間項目 */
+    }
+    
+    .breadcrumb-item:last-child a {
+    display: inline-block;
+    max-width: 250px; /* 加入最大寬度限制 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+  }
+
+     ol.d-flex {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
