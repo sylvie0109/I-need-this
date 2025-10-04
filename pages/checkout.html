@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="../assets/scss/pages/_checkout.scss">
 </head>
 <body>
+  <%- include('./layout/header'); -%>
   <!-- 頁首 -->
-  <nav class="container mb-72 text-sans">
+  <!-- <nav class="container mb-72 text-sans">
     <div class="d-flex align-center justify-between">
       <a href="index.html" class="py-16 "><img src="../assets/images/svg/logo_on light.svg" alt="logo"></a>
       <ul class="d-flex align-center ul">   
@@ -25,7 +26,7 @@
         <li><a href="" class="d-flex align-center justify-end px-32 py-32 bg-primary-dark tm login">註冊/登入</a></li>
         </ul>
     </div>
-  </nav>
+  </nav> -->
   <main class="container px-12 text-sans">
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -166,6 +167,7 @@
       <div class="btn-link d-flex align-center text-neuture-0 bg-primary-dark"><a href="#" class="d-flex align-center next-step text-neuture-0">下一步：填寫資料<img src="../assets/images/svg/Arrow right.svg" alt="" class="arrow-l"></a></div>
     </div>
   </main>
-  <footer></footer>
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
 </body>
 </html>
