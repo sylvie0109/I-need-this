@@ -23,7 +23,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- 引入 Material Outlined -->
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
       rel="stylesheet"
@@ -32,7 +31,17 @@
   <body>
     <%- include('./layout/header.ejs') %>
 
-    <div class="main-content-wrapper">
+    <div
+      class="main-content-wrapper"
+      style="
+        position: relative;
+        background-image: url('../assets/images/bgc-img02.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding-bottom: 96px;
+      "
+    >
       <div class="container">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">

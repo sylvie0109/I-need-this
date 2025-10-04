@@ -5,19 +5,6 @@
 $image-path: "../assets/images/";
 
 // =============================================
-// --- 1. 主要內容區塊容器 ---
-// 設定整個頁面內容的背景圖、基本定位與底部留白。
-// =============================================
-.main-content-wrapper {
-  position: relative;
-  background-image: url($image-path + "bgc-img02.png"); // 使用變數組合路徑
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding-bottom: 96px;
-}
-
-// =============================================
 // --- 2. 麵包屑導覽 ---
 // 設定頁面路徑導覽列的樣式，包含間距、顏色與響應式調整。
 // =============================================
