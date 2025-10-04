@@ -14,7 +14,7 @@
 <body>
   <%- include('./layout/header'); -%>
   <!-- 頁首 -->
-  <main class=" checkout-container checkout-px-12 text-sans">
+  <main class="checkout-container checkout-px-12 checkout-mt-72 text-sans">
     <script>
       document.addEventListener('DOMContentLoaded', () => {
     // 找到所有數量控制容器
@@ -79,7 +79,7 @@
                 <input type="text" value="1" class="quantity-input tm">
                 <button class="plus-btn icon-center p-16"><img src="../assets/images/svg/Add.svg" alt="加號"></button>
               </div>
-              <div class="d-flex justify-space-between h6 media-mb-16"><div class="hide">總計</div>NT$ 1,197</div>
+              <div class="d-flex justify-space-between checkout-h6 media-mb-16"><div class="hide">總計</div>NT$ 1,197</div>
             </div>
           </span>
           <!-- 靜夜語商品資訊 -->
@@ -99,7 +99,7 @@
                 <input type="text" value="1" class="quantity-input tm">
                 <button class="plus-btn icon-center p-16"><img src="../assets/images/svg/Add.svg" alt="加號"></button>
               </div>
-              <div class="d-flex justify-space-between h6 media-mb-16">
+              <div class="d-flex justify-space-between checkout-h6 media-mb-16">
                 <div class="hide">總計</div>
                 <div>NT$ 599</div>
               </div>
@@ -113,7 +113,7 @@
         <div class="mb-32 media-mb-16">
           <h2 class="checkout-py-8 pl-16 bg-color text-serif">選擇送貨及付款方式</h2>
         </div>
-        <div class="h7 mb-8">送貨方式</div>
+        <div class="h7 checkout-mb-8">送貨方式</div>
         <div class="form-group mb-32 media-mb-16">
             <select id="shipping-method" class="tm text-neuture-80 custom-select">
                 <option value="store-pickup">超商取貨</option>
@@ -121,7 +121,7 @@
                 <option value="express">快速到貨</option>
             </select>
         </div>
-        <div class="h7 mb-8">付款方式</div>
+        <div class="h7 checkout-mb-8">付款方式</div>
         <div class="form-group">
             <select id="shipping-method" class="tm text-neuture-80 custom-select">
                 <option value="credit-card">信用卡付款</option>
@@ -143,7 +143,7 @@
           </ul>
           <ul class="d-flex justify-between mb-16 ul">
             <li class="tm text-neuture-60">應付金額</li>
-            <li class="h4 media-h4">NT$ 1,856</li>
+            <li class="media-h4 text-sans">NT$ 1,856</li>
           </ul>
         </div>
       </div>
