@@ -1,0 +1,22 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}

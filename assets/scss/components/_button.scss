@@ -1,0 +1,18 @@
+.btn {
+    padding: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-dark {
+    background-color: var(--Primary-dark);
+    color: var(--Neutral-0);
+}
+
+.btn-light {
+    border: 1px solid var(--Primary-dark);
+}
